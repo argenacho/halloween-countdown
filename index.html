@@ -27,7 +27,7 @@
     .warning{margin:0 0 9px;font:8px "DM Mono";letter-spacing:3px;text-transform:uppercase;color:#acb9ac}.warning:before{content:"";display:inline-block;width:31px;height:1px;background:var(--red);vertical-align:middle;margin-right:9px;box-shadow:0 0 8px var(--red)}
     h1{font:clamp(52px,6vw,91px)/.75 "Bebas Neue";letter-spacing:-1px;text-transform:uppercase;margin:0;color:#eff1ea;text-shadow:0 5px 20px #000,0 0 2px #fff}.headline h1 span{color:var(--red);display:inline-block;transform:skew(-5deg);text-shadow:0 0 18px #c8180d8c}
     .threat{max-width:300px;text-align:right;font:9px/1.6 "DM Mono";letter-spacing:1px;text-transform:uppercase;color:#959f96;padding-right:12px;border-right:2px solid var(--red);text-shadow:0 2px 5px #000}
-    .countdown-panel{position:relative;z-index:9;margin:auto 0 0;background:linear-gradient(135deg,#070909ed,#020303f7);border:1px solid #88958b52;box-shadow:0 28px 70px #000,0 0 35px #b7190d29,inset 0 0 50px #000;backdrop-filter:blur(12px)}
+    .countdown-panel{position:relative;z-index:9;margin:0;background:linear-gradient(135deg,#070909ed,#020303f7);border:1px solid #88958b52;box-shadow:0 28px 70px #000,0 0 35px #b7190d29,inset 0 0 50px #000;backdrop-filter:blur(12px)}
     .countdown-panel:before,.countdown-panel:after{content:"";position:absolute;width:82px;height:2px;background:var(--red);box-shadow:0 0 14px var(--red)}.countdown-panel:before{top:-1px;left:0}.countdown-panel:after{bottom:-1px;right:0}
     .panel-head{height:38px;padding:0 17px;display:flex;align-items:center;border-bottom:1px solid #7d8a802b;font:7px "DM Mono";letter-spacing:2.3px;text-transform:uppercase;color:#859087}.panel-head strong{color:#d6dad4;font-weight:500}.panel-head .blink{width:6px;height:6px;border-radius:50%;background:var(--red);box-shadow:0 0 12px var(--red);margin-right:10px;animation:pulse 1.2s steps(2) infinite}.panel-head code{margin-left:auto;color:#606a62}
     .countdown{display:grid;grid-template-columns:repeat(4,1fr);padding:clamp(13px,2vh,22px) 18px 10px}
@@ -54,10 +54,6 @@
       <div class="classified"><b>●</b> Acceso autorizado</div>
     </header>
     <section class="stage">
-      <div class="headline">
-        <div><p class="warning">Advertencia · el portal está abierto</p><h1>La noche <span>nos espera.</span></h1></div>
-        <p class="threat">Dos familias entran.<br>Nadie sabe qué vuelve.<br>Orlando · 09.09.26</p>
-      </div>
       <div class="scratches" aria-hidden="true"><i></i><i></i><i></i></div>
       <section class="countdown-panel" aria-label="Cuenta regresiva para el viaje">
         <div class="panel-head"><span class="blink"></span><strong>Tiempo hasta el despegue</strong><code>CASE_0909 · MCO</code></div>
@@ -70,6 +66,10 @@
         <div class="details"><div class="detail"><small>Fecha marcada</small><strong>09 SEP 2026</strong></div><div class="detail"><small>Hora del encuentro</small><strong>20:45 <sup>ARG</sup></strong></div><div class="detail"><small>Destino final</small><strong>ORLANDO <sup>FL</sup></strong></div></div>
         <div class="blood-progress"><div class="progress-copy"><span>El terror se acerca</span><strong id="percent">0%</strong></div><div class="track" role="progressbar" aria-label="Progreso hasta el viaje" aria-valuemin="0" aria-valuemax="100"><span class="fill" id="fill"><i class="drop one"></i><i class="drop two"></i><i class="drop three"></i></span></div></div>
       </section>
+      <div class="headline">
+        <div><p class="warning">Advertencia · el portal está abierto</p><h1>La noche <span>nos espera.</span></h1></div>
+        <p class="threat">Dos familias entran.<br>Nadie sabe qué vuelve.<br>Orlando · 09.09.26</p>
+      </div>
       <div class="bottomline"><span><b>Familia López</b> <em>×</em> <b>Familia Mejías</b></span><span>Halloween Horror Nights · Orlando</span></div>
     </section>
   </main>

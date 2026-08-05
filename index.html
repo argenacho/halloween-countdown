@@ -13,7 +13,7 @@
     :root{--red:#d51d13;--red-dark:#5c0907;--sick:#b8d7a7;--bone:#e6e1d4;--ash:#8f978e;--void:#050606}
     *{box-sizing:border-box}html,body{height:100%;margin:0;overflow:hidden;background:var(--void);color:var(--bone);font-family:"DM Sans",sans-serif}
     body:after{content:"";position:fixed;inset:0;z-index:30;pointer-events:none;background:repeating-linear-gradient(0deg,#ffffff08 0 1px,transparent 1px 4px);mix-blend-mode:overlay;opacity:.35}
-    .page{height:100svh;min-height:550px;position:relative;overflow:hidden;isolation:isolate;background:#030404 url("horror-gates.webp") center 52%/cover no-repeat}
+    .page{--daily-bg:url("horror-gates.webp");height:100svh;min-height:550px;position:relative;overflow:hidden;isolation:isolate;background:#030404 var(--daily-bg) center 52%/cover no-repeat;transition:background-image .8s ease}
     .page:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,#020303d9 0,#0203034d 32%,#02030373 67%,#020303ed 100%),radial-gradient(circle at 50% 48%,transparent 0 18%,#0102023d 48%,#010202e8 100%)}
     .blood-ceiling{position:absolute;z-index:12;top:0;left:0;right:0;height:7px;background:linear-gradient(90deg,#350403,#c31b10 35%,#4b0705 70%,#cf2314);box-shadow:0 3px 16px #e21d0ca6}
     .blood-ceiling i{position:absolute;top:2px;width:9px;background:linear-gradient(#c41d12,#6d0b08);border-radius:0 0 70% 70%;filter:drop-shadow(0 3px 4px #000)}
@@ -35,13 +35,13 @@
     .number{text-align:center}.number strong{display:block;font:clamp(86px,12vw,174px)/.68 "Bebas Neue";letter-spacing:1px;color:#edf0e8;text-shadow:0 6px 0 #161b17,0 0 24px #c6e0bf26}.number span{display:block;margin-top:13px;font:7px "DM Mono";letter-spacing:3px;text-transform:uppercase;color:#8c968e}
     .details{display:grid;grid-template-columns:repeat(3,1fr);margin:0 18px;border-top:1px dashed #67726952;border-bottom:1px solid #67726933}.detail{padding:10px 13px;display:flex;flex-direction:column;border-right:1px solid #67726930}.detail:last-child{border:0}.detail small{font:6px "DM Mono";letter-spacing:2px;text-transform:uppercase;color:#6e786f}.detail strong{font:17px "Bebas Neue";letter-spacing:1.5px;margin-top:3px;color:#d9ddd5}.detail sup{font:6px "DM Mono";color:var(--red)}
     .blood-progress{padding:9px 24px 15px}.progress-copy{display:flex;justify-content:space-between;margin-bottom:7px;font:6px "DM Mono";letter-spacing:2.4px;text-transform:uppercase;color:#707a72}.progress-copy strong{color:#e12a1c;font-size:8px}.track{height:7px;border:1px solid #76120c;background:#1c0605;box-shadow:inset 0 2px 4px #000;position:relative}.fill{display:block;height:100%;width:0;background:linear-gradient(90deg,#5c0705,#bb160d 62%,#f13a29);box-shadow:0 0 13px #e52618b8;transition:width 1s linear;position:relative}.fill:after{content:"";position:absolute;right:-4px;top:-4px;width:13px;height:13px;background:#e23021;border-radius:50% 45% 60% 40%;box-shadow:0 0 10px #f02d20}.drop{position:absolute;top:6px;width:4px;height:10px;background:#9d100a;border-radius:0 0 4px 4px}.drop.one{left:22%}.drop.two{left:61%;height:15px}.drop.three{right:7%;height:7px}
-    .bottomline{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:#7f8881;font:7px "DM Mono";letter-spacing:2px;text-transform:uppercase}.bottomline b{color:#c7ccc6;font-weight:500}.bottomline em{color:var(--red);font-style:normal}
+    .bottomline{position:relative;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:14px;margin-top:12px;color:#7f8881;font:7px "DM Mono";letter-spacing:2px;text-transform:uppercase}.bottomline b{color:#c7ccc6;font-weight:500}.bottomline em{color:var(--red);font-style:normal}.photo-credit{color:#8f9a91;text-decoration:none;border-bottom:1px solid #8f9a9166;white-space:nowrap}.photo-credit:hover{color:#e1e5df;border-color:var(--red)}
     .scratches{position:absolute;z-index:4;right:6%;top:28%;width:73px;height:145px;transform:rotate(16deg);opacity:.55}.scratches i{position:absolute;top:0;width:2px;height:100%;background:linear-gradient(transparent,#e3e7df 18%,#98150d 52%,transparent 90%);box-shadow:0 0 4px #000}.scratches i:nth-child(1){left:10px}.scratches i:nth-child(2){left:34px;top:8px}.scratches i:nth-child(3){left:58px;top:-6px}
     @keyframes pulse{50%{opacity:.18}}@keyframes heartbeat{50%{opacity:.28}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}
     @media(max-width:720px){
       .page{background-position:center 48%}.topbar{height:62px;padding:0 13px}.stage{height:calc(100svh - 62px);padding:10px 10px 12px}.seal{width:41px;height:41px;font-size:23px}.brand-copy{font-size:6px}.classified{font-size:6px;padding:7px 8px;letter-spacing:1.5px}
       .headline{align-items:flex-start}.warning{font-size:6px;margin-bottom:7px;letter-spacing:2px}h1{font-size:clamp(46px,14vw,68px)}.threat{display:none}.scratches{right:4%;top:20%;height:90px;width:50px}
-      .panel-head{height:32px;padding:0 9px;font-size:5px;letter-spacing:1.4px}.panel-head code{display:none}.countdown{padding:17px 3px 8px}.number strong{font-size:clamp(67px,21vw,104px)}.number span{font-size:5px;letter-spacing:1.2px;margin-top:9px}.unit:not(:last-child):after{font-size:25px;right:-3px}.details{margin:0 7px}.detail{padding:8px 5px}.detail small{font-size:5px;letter-spacing:1px}.detail strong{font-size:13px}.blood-progress{padding:7px 11px 12px}.bottomline{font-size:5px;letter-spacing:1px}.bottomline span:last-child{display:none}
+      .panel-head{height:32px;padding:0 9px;font-size:5px;letter-spacing:1.4px}.panel-head code{display:none}.countdown{padding:17px 3px 8px}.number strong{font-size:clamp(67px,21vw,104px)}.number span{font-size:5px;letter-spacing:1.2px;margin-top:9px}.unit:not(:last-child):after{font-size:25px;right:-3px}.details{margin:0 7px}.detail{padding:8px 5px}.detail small{font-size:5px;letter-spacing:1px}.detail strong{font-size:13px}.blood-progress{padding:7px 11px 12px}.bottomline{font-size:5px;letter-spacing:1px}.bottomline .event-name{display:none}
     }
     @media(max-height:700px){.topbar{height:55px}.stage{height:calc(100svh - 55px);padding-top:8px}.warning{display:none}h1{font-size:clamp(42px,10vh,66px)}.panel-head{height:28px}.countdown{padding-top:10px;padding-bottom:5px}.number strong{font-size:clamp(59px,18vh,118px)}.number span{margin-top:5px}.details .detail{padding-top:6px;padding-bottom:6px}.blood-progress{padding-top:6px;padding-bottom:9px}.bottomline{margin-top:7px}}
     @media(max-width:720px){.number strong{font-size:clamp(52px,17vw,82px);letter-spacing:0}.unit:not(:last-child):after{font-size:20px;right:-2px}}
@@ -71,15 +71,30 @@
         <div><p class="warning">Advertencia · el portal está abierto</p><h1>La noche <span>nos espera.</span></h1></div>
         <p class="threat">Dos familias entran.<br>Nadie sabe qué vuelve.<br>Orlando · 09.09.26</p>
       </div>
-      <div class="bottomline"><span><b>Familia López</b> <em>×</em> <b>Familia Mejías</b></span><span>Halloween Horror Nights · Orlando</span></div>
+      <div class="bottomline"><span><b>Familia López</b> <em>×</em> <b>Familia Mejías</b></span><span class="event-name">Halloween Horror Nights · Orlando</span><a class="photo-credit" id="photoCredit" href="https://commons.wikimedia.org/wiki/Category:Halloween_Horror_Nights_Orlando_29" target="_blank" rel="noopener">Fondo diario · Commons</a></div>
     </section>
   </main>
   <script>
     const target=new Date("2026-09-09T20:45:00-03:00").getTime();
     const start=new Date("2026-01-01T00:00:00-03:00").getTime();
     const ids=["days","hours","minutes","seconds"];
+    async function setDailyBackground(){
+      const api=new URL("https://commons.wikimedia.org/w/api.php");
+      api.search=new URLSearchParams({action:"query",generator:"categorymembers",gcmtitle:"Category:Halloween Horror Nights Orlando 29",gcmtype:"file",gcmlimit:"50",prop:"imageinfo",iiprop:"url|size",iiurlwidth:"1920",format:"json",origin:"*"});
+      try{
+        const response=await fetch(api,{mode:"cors"});
+        if(!response.ok)throw new Error("commons unavailable");
+        const data=await response.json();
+        const images=Object.values(data.query?.pages||{}).map(page=>({title:page.title,info:page.imageinfo?.[0]})).filter(item=>item.info?.thumburl&&item.info.width>item.info.height*1.15).sort((a,b)=>a.title.localeCompare(b.title));
+        if(!images.length)return;
+        const today=new Date(),dayNumber=Math.floor(Date.UTC(today.getFullYear(),today.getMonth(),today.getDate())/86400000);
+        const chosen=images[dayNumber%images.length],preload=new Image();
+        preload.onload=()=>{document.querySelector(".page").style.setProperty("--daily-bg",`url("${chosen.info.thumburl}")`);const credit=document.getElementById("photoCredit");credit.href=chosen.info.descriptionurl;credit.title=chosen.title.replace(/^File:/,"")};
+        preload.src=chosen.info.thumburl;
+      }catch(error){console.info("Se mantiene el fondo de respaldo.")}
+    }
     function update(){const now=Date.now(),d=Math.max(0,target-now);const v=[Math.floor(d/86400000),Math.floor(d/3600000%24),Math.floor(d/60000%60),Math.floor(d/1000%60)];ids.forEach((id,i)=>document.getElementById(id).textContent=String(v[i]).padStart(2,"0"));const p=Math.min(100,Math.max(0,(now-start)/(target-start)*100));document.getElementById("fill").style.width=p+"%";document.getElementById("percent").textContent=Math.round(p)+"%";document.querySelector(".track").setAttribute("aria-valuenow",Math.round(p))}
-    update();setInterval(update,1000);
+    setDailyBackground();update();setInterval(update,1000);
   </script>
 </body>
 </html>

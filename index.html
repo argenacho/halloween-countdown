@@ -25,7 +25,7 @@
     .stage{height:calc(100svh - 76px);min-height:474px;padding:clamp(15px,2.2vh,25px) clamp(16px,3vw,46px) 20px;position:relative;display:flex;flex-direction:column;justify-content:space-between}
     .headline{position:relative;z-index:5;display:flex;align-items:flex-end;justify-content:space-between;gap:20px}
     .warning{margin:0 0 9px;font:8px "DM Mono";letter-spacing:3px;text-transform:uppercase;color:#acb9ac}.warning:before{content:"";display:inline-block;width:31px;height:1px;background:var(--red);vertical-align:middle;margin-right:9px;box-shadow:0 0 8px var(--red)}
-    h1{font:clamp(52px,6vw,91px)/.75 "Bebas Neue";letter-spacing:-1px;text-transform:uppercase;margin:0;color:#eff1ea;text-shadow:0 5px 20px #000,0 0 2px #fff}.headline h1 span{color:var(--red);display:inline-block;transform:skew(-5deg);text-shadow:0 0 18px #c8180d8c}
+    h1{font:clamp(52px,6vw,91px)/.75 "Bebas Neue";letter-spacing:-1px;text-transform:uppercase;margin:0;color:#eff1ea;text-shadow:0 5px 20px #000,0 0 2px #fff}.headline h1 b{font-weight:400}.headline h1 span{color:var(--red);display:inline-block;transform:skew(-5deg);text-shadow:0 0 18px #c8180d8c}
     .threat{max-width:300px;text-align:right;font:9px/1.6 "DM Mono";letter-spacing:1px;text-transform:uppercase;color:#959f96;padding-right:12px;border-right:2px solid var(--red);text-shadow:0 2px 5px #000}
     .countdown-panel{position:relative;z-index:9;margin:0;background:linear-gradient(135deg,#070909ed,#020303f7);border:1px solid #88958b52;box-shadow:0 28px 70px #000,0 0 35px #b7190d29,inset 0 0 50px #000;backdrop-filter:blur(12px)}
     .countdown-panel:before,.countdown-panel:after{content:"";position:absolute;width:82px;height:2px;background:var(--red);box-shadow:0 0 14px var(--red)}.countdown-panel:before{top:-1px;left:0}.countdown-panel:after{bottom:-1px;right:0}
@@ -68,7 +68,7 @@
         <div class="blood-progress"><div class="progress-copy"><span>El terror se acerca</span><strong id="percent">0%</strong></div><div class="track" role="progressbar" aria-label="Progreso hasta el viaje" aria-valuemin="0" aria-valuemax="100"><span class="fill" id="fill"><i class="drop one"></i><i class="drop two"></i><i class="drop three"></i></span></div></div>
       </section>
       <div class="headline">
-        <div><p class="warning">Advertencia · el portal está abierto</p><h1>La noche <span>nos espera.</span></h1></div>
+        <div><p class="warning">Advertencia · el portal está abierto</p><h1><b id="headlineLead">La noche</b> <span id="headlineAccent">nos espera.</span></h1></div>
         <p class="threat">Dos familias entran.<br>Nadie sabe qué vuelve.<br>Orlando · 09.09.26</p>
       </div>
       <div class="bottomline"><span><b>Familia López</b> <em>×</em> <b>Familia Mejías</b></span><span class="event-name">Halloween Horror Nights · Orlando</span><a class="photo-credit" id="photoCredit" href="https://commons.wikimedia.org/wiki/Category:Halloween_Horror_Nights_Orlando_29" target="_blank" rel="noopener">Fondo diario · Commons</a></div>
@@ -78,6 +78,13 @@
     const target=new Date("2026-09-09T20:45:00-03:00").getTime();
     const start=new Date("2026-01-01T00:00:00-03:00").getTime();
     const ids=["days","hours","minutes","seconds"];
+    function setRandomHeadline(){
+      const phrases=[["La noche","nos espera."],["El miedo","despertó."],["Las sombras","nos llaman."],["Ya vienen","por nosotros."],["No mires","atrás."],["El portal","está abierto."],["La pesadilla","se acerca."],["Orlando","nos espera."],["La noche","tiene hambre."],["Algo oscuro","nos sigue."],["Nadie sabe","qué vuelve."],["El terror","ya comenzó."],["Septiembre","abre la puerta."]];
+      let previous=-1;try{previous=Number(sessionStorage.getItem("lastHorrorPhrase"))}catch(error){}
+      let selected=Math.floor(Math.random()*phrases.length);if(selected===previous)selected=(selected+1)%phrases.length;
+      try{sessionStorage.setItem("lastHorrorPhrase",String(selected))}catch(error){}
+      document.getElementById("headlineLead").textContent=phrases[selected][0];document.getElementById("headlineAccent").textContent=phrases[selected][1];
+    }
     async function setDailyBackground(){
       const api=new URL("https://commons.wikimedia.org/w/api.php");
       api.search=new URLSearchParams({action:"query",generator:"categorymembers",gcmtitle:"Category:Halloween Horror Nights Orlando 29",gcmtype:"file",gcmlimit:"50",prop:"imageinfo",iiprop:"url|size",iiurlwidth:"1920",format:"json",origin:"*"});
@@ -94,7 +101,7 @@
       }catch(error){console.info("Se mantiene el fondo de respaldo.")}
     }
     function update(){const now=Date.now(),d=Math.max(0,target-now);const v=[Math.floor(d/86400000),Math.floor(d/3600000%24),Math.floor(d/60000%60),Math.floor(d/1000%60)];ids.forEach((id,i)=>document.getElementById(id).textContent=String(v[i]).padStart(2,"0"));const p=Math.min(100,Math.max(0,(now-start)/(target-start)*100));document.getElementById("fill").style.width=p+"%";document.getElementById("percent").textContent=Math.round(p)+"%";document.querySelector(".track").setAttribute("aria-valuenow",Math.round(p))}
-    setDailyBackground();update();setInterval(update,1000);
+    setRandomHeadline();setDailyBackground();update();setInterval(update,1000);
   </script>
 </body>
 </html>

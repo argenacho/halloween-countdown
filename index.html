@@ -87,9 +87,9 @@
     const start=new Date("2026-01-01T00:00:00-03:00").getTime();
     const ids=["days","hours","minutes","seconds"];
     function launchDailyJumpscare(){
-      const files=["jumpscare-1.webp","jumpscare-2.webp","jumpscare-3.webp","jumpscare-4.webp"];
+      const files=["jumpscare-1.webp","jumpscare-2.webp","jumpscare-3.webp","jumpscare-4.webp","jumpscare-5.webp","jumpscare-6.webp","jumpscare-7.webp"];
       const dateKey=new Intl.DateTimeFormat("en-CA",{timeZone:"America/Argentina/Buenos_Aires",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());
-      const dailyIndex=[...dateKey].reduce((hash,char)=>(hash*31+char.charCodeAt(0))>>>0,7)%files.length;
+      const dailyIndex=new Date(`${dateKey}T12:00:00-03:00`).getUTCDay();
       const scare=document.getElementById("jumpscare"),figure=document.getElementById("jumpscareFigure"),image=new Image();
       image.onload=()=>{figure.style.backgroundImage=`url("${files[dailyIndex]}")`;requestAnimationFrame(()=>scare.classList.add("active"));setTimeout(()=>{scare.classList.remove("active");scare.remove()},5000)};
       image.onerror=()=>scare.remove();image.src=files[dailyIndex];

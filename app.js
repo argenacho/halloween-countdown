@@ -49,6 +49,7 @@ form.addEventListener('submit', async (event) => {
   button.disabled = true;
   button.textContent = 'Enviando tu confirmación…';
   showStatus('Estamos enviando tu RSVP.', '');
+  let redirecting = false;
   try {
     const response = await fetch(RSVP_ENDPOINT, {
       method: 'POST',
@@ -67,15 +68,23 @@ form.addEventListener('submit', async (event) => {
       throw new Error('RSVP not accepted');
     }
     showStatus(`¡Listo, ${name}! Confirmamos ${people === 1 ? 'tu asistencia' : `la asistencia de ${people} personas`}. Nos vemos el 31 en Casa 199. No te olvides del disfraz.`, 'success');
-    form.reset();
+    try {
+      sessionStorage.setItem('halloween199.rsvp', JSON.stringify({ name, people }));
+    } catch (error) {
+      // The receipt can still be displayed without personal details when storage is unavailable.
+    }
+    redirecting = true;
+    window.location.assign('confirmacion.html#recibido');
   } catch (error) {
     showStatus('No pudimos confirmar la recepción. Tus datos siguen en el formulario. Intentá de nuevo en unos minutos.', 'error');
   } finally {
-    button.disabled = false;
-    button.replaceChildren(document.createTextNode('Confirmar mi asistencia '));
-    const arrow = document.createElement('span');
-    arrow.setAttribute('aria-hidden', 'true');
-    arrow.textContent = '↗';
-    button.append(arrow);
+    if (!redirecting) {
+      button.disabled = false;
+      button.replaceChildren(document.createTextNode('Confirmar mi asistencia '));
+      const arrow = document.createElement('span');
+      arrow.setAttribute('aria-hidden', 'true');
+      arrow.textContent = '↗';
+      button.append(arrow);
+    }
   }
 });

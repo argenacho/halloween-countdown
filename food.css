@@ -16,7 +16,8 @@
 .food-track::-webkit-scrollbar { display: none; }
 .food-card { flex: 0 0 100%; min-width: 0; display: grid; grid-template-columns: 1.15fr 1fr; scroll-snap-align: start; scroll-snap-stop: always; }
 .food-photo { min-width: 0; position: relative; margin: 0; background: #18121a; overflow: hidden; }
-.food-photo img { display: block; width: 100%; height: 100%; min-height: 425px; object-fit: cover; aspect-ratio: 4/3; }
+.food-photo img { display: block; width: 100%; height: 100%; min-height: 425px; object-fit: contain; aspect-ratio: 4/3; }
+.food-photo figcaption { position: absolute; bottom: 0; inset-inline: 0; padding: 12px 16px; background: #100a12ed; color: #eedbe5; font-size: 11px; line-height: 1.6; }
 .food-info { padding: 36px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-width: 0; }
 .food-category { font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .15em; font-size: 10px; color: #ff9fac; margin: 0 0 17px; }
 .food-info h3 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(30px, 3vw, 40px); font-weight: 400; letter-spacing: -.04em; line-height: 1.15; margin: 0 0 19px; }

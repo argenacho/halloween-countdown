@@ -1,6 +1,6 @@
 'use strict';
 
-// Original Wikimedia Commons photos; each card includes its author, source and reuse license.
+// Original, licensed photographs of finished Halloween food and themed drinks.
 const FOOD_IDEAS = [
   {
     "id": "cupcakes-fantasma",
@@ -19,19 +19,19 @@ const FOOD_IDEAS = [
     }
   },
   {
-    "id": "pizza-oscura",
-    "title": "Pizza del Upside Down",
+    "id": "onigiri-fantasma",
+    "title": "Onigiri fantasma",
     "category": "salado",
-    "description": "Una pizza de masa oscura, con queso y toppings de colores intensos. Podés armar arañas de aceitunas o figuras de monstruos para completar la temática.",
-    "tip": "Cortala en porciones para compartir",
-    "alt": "Pizza de masa negra con queso y toppings anaranjados",
-    "image": "assets/food/pizza-oscura.jpg",
+    "description": "Bolitas de arroz rellenas de hongos con forma de fantasma. El de la foto asoma entre hojas verdes y tiene ojos, boca y mejillas: una aparición salada que se come de un bocado.",
+    "tip": "Prepará unidades pequeñas para compartir",
+    "alt": "Onigiri blanco con forma de fantasma junto a un pimiento calabaza",
+    "image": "assets/food/halloween-bento-fantasma.jpg",
     "credit": {
-      "author": "Peachyeung316",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:The_Halloween_pizza_at_PHD.jpg",
-      "originalTitle": "File:The Halloween pizza at PHD.jpg"
+      "author": "gamene",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Ghost_onigiri_bento_(4039012309).jpg",
+      "originalTitle": "File:Ghost onigiri bento (4039012309).jpg"
     }
   },
   {
@@ -67,51 +67,51 @@ const FOOD_IDEAS = [
     }
   },
   {
-    "id": "huevos-monstruo",
-    "title": "Huevos monstruosos",
+    "id": "huevos-fantasma",
+    "title": "Huevos fantasma",
     "category": "salado",
-    "description": "Huevos rellenos con una mezcla cremosa. Para darles el toque Halloween, agregales ojos de aceituna o arañas negras; la foto muestra la base que podés decorar.",
+    "description": "Huevos duros con ojos y boca de alga nori, como el fantasma de la parte superior de este bento de Halloween. Un corte en la base ayuda a que queden de pie en la bandeja.",
     "tip": "Llevalos refrigerados hasta servir",
-    "alt": "Huevos rellenos decorados con hierbas, como base para la idea",
-    "image": "assets/food/huevos-monstruo.jpg",
+    "alt": "Bento de Halloween con un huevo fantasma, muffin araña y rollitos",
+    "image": "assets/food/halloween-bento-arana.jpg",
     "credit": {
-      "author": "Robert Loescher",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Deviled_Eggs_topped_with_Scallions.JPG",
-      "originalTitle": "File:Deviled Eggs topped with Scallions.JPG"
-    }
-  },
-  {
-    "id": "manzanas-hechizadas",
-    "title": "Manzanas hechizadas",
-    "category": "dulce",
-    "description": "Manzanas bañadas en caramelo o chocolate de colores, con gomitas de gusanos y granas. Una versión del clásico dulce de Halloween que se come con palito.",
-    "tip": "Una manzana por porción",
-    "alt": "Manzanas cubiertas de caramelo de colores y gomitas",
-    "image": "assets/food/manzanas-hechizadas.jpg",
-    "credit": {
-      "author": "RichardBH from Hamilton, Canada",
+      "author": "gamene",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Candy_Apple_(5819333319).jpg",
-      "originalTitle": "File:Candy Apple (5819333319).jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Spider_muffin_bento_(4051218539).jpg",
+      "originalTitle": "File:Spider muffin bento (4051218539).jpg"
     }
   },
   {
-    "id": "pocion-cementerio",
-    "title": "Poción del cementerio",
-    "category": "bebida",
-    "description": "Una bebida cremosa de cacao o café, con helado y migas de galletitas que parezcan tierra. Armala en vasos individuales y sumale una decoración fantasmal.",
-    "tip": "Podés hacerla sin alcohol",
-    "alt": "Bebida cremosa con helado y migas de chocolate",
-    "image": "assets/food/pocion-cementerio.jpg",
+    "id": "galletas-dentadura",
+    "title": "Galletas de dentadura monstruosa",
+    "category": "dulce",
+    "description": "Galletitas con bocas rojas, dientes blancos de malvavisco y ojos de colores, como los pequeños monstruos de la foto. Cada una puede llevar cuernos, cejas o colmillos distintos.",
+    "tip": "Llevalas armadas en una bandeja",
+    "alt": "Galletas de monstruos decoradas con grandes dentaduras, ojos y cuernos de colores",
+    "image": "assets/food/halloween-galletas-dentadura.jpg",
     "credit": {
-      "author": "Silar",
+      "author": "Lindsey T",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Day_302_Little_Monsters.jpg",
+      "originalTitle": "File:Day 302 Little Monsters.jpg"
+    }
+  },
+  {
+    "id": "pocion-caldero",
+    "title": "Poción verde del caldero",
+    "category": "bebida",
+    "description": "Un cóctel cítrico verde presentado en un pequeño caldero, como el de la foto. La niebla sirve como referencia de ambientación para un brindis del Otro Lado.",
+    "tip": "Traé la bebida lista; la niebla es una referencia visual",
+    "alt": "Cóctel verde en un pequeño caldero rodeado de niebla",
+    "image": "assets/food/halloween-pocion-caldero.jpg",
+    "credit": {
+      "author": "Sumit Surai",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:020221030_124744_Ghost_in_the_Graveyard_drink.jpg",
-      "originalTitle": "File:020221030 124744 Ghost in the Graveyard drink.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Goblet_of_Fire_Cocktail.jpg",
+      "originalTitle": "File:Goblet of Fire Cocktail.jpg"
     }
   },
   {
@@ -147,67 +147,67 @@ const FOOD_IDEAS = [
     }
   },
   {
-    "id": "brownies-cementerio",
-    "title": "Brownies del cementerio",
+    "id": "torta-cementerio",
+    "title": "Torta del cementerio",
     "category": "dulce",
-    "description": "Convertí estos cuadrados de chocolate en pequeñas tumbas: una galletita como lápida, migas como tierra y alguna gomita de gusano. La foto muestra brownies servidos con helado como punto de partida.",
-    "tip": "Cortalos en cuadrados individuales",
-    "alt": "Brownies de chocolate servidos en recipientes con helado",
-    "image": "assets/food/brownies-cementerio.jpg",
+    "description": "Una torta de chocolate convertida en cementerio: lápidas de galletita, tierra de cacao, huesos y calaveras. La foto muestra el resultado decorado, listo para abrir el banquete del Otro Lado.",
+    "tip": "Traela cortada y con una espátula",
+    "alt": "Torta de Halloween con lápidas, calaveras y decoraciones de cementerio",
+    "image": "assets/food/halloween-torta-cementerio.jpg",
     "credit": {
-      "author": "Dr. Chinchu C.",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Brownies_with_Ice_cream.jpg",
-      "originalTitle": "File:Brownies with Ice cream.jpg"
+      "author": "Infrogmation of New Orleans",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Graveyard_Cake_Halloween.jpg",
+      "originalTitle": "File:Graveyard Cake Halloween.jpg"
     }
   },
   {
     "id": "merengues-fantasma",
     "title": "Fantasmas de merengue",
     "category": "dulce",
-    "description": "Usá merengues blancos como base para pequeños fantasmas. Dales una punta alta y dibujales ojos y boca con chocolate una vez fríos: livianos, crocantes y bastante inquietantes.",
+    "description": "Merengues blancos con forma de fantasma y ojos y boca de chocolate, como los de la foto. Crocantes por fuera y livianos, son pequeñas apariciones listas para compartir.",
     "tip": "Guardalos en un recipiente seco",
-    "alt": "Merengues blancos pequeños",
-    "image": "assets/food/merengues-fantasma.jpg",
+    "alt": "Dos merengues blancos decorados como fantasmas con ojos y boca",
+    "image": "assets/food/halloween-merengues-fantasma.jpg",
     "credit": {
-      "author": "Benjamin Ikuta",
+      "author": "Marinna",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Meringue_cookies.jpg",
-      "originalTitle": "File:Meringue cookies.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Merenguitos_Halloween.jpg",
+      "originalTitle": "File:Merenguitos Halloween.jpg"
     }
   },
   {
-    "id": "trufas-arana",
-    "title": "Trufas araña",
+    "id": "pretzels-monstruo",
+    "title": "Pretzels de monstruos",
     "category": "dulce",
-    "description": "Hacé bolitas de chocolate y sumales patitas de pretzel o chocolate, con dos ojos de glasé. La foto muestra trufas como punto de partida para una invasión de arañas dulces.",
-    "tip": "Llevalas en pirotines pequeños",
-    "alt": "Trufas de chocolate cubiertas con cacao y frutos secos",
-    "image": "assets/food/trufas-arana.jpg",
+    "description": "Pretzels bañados en chocolate y cubiertos con ojos de azúcar. Cada uno queda con una cara distinta, como esta bandeja de pequeños monstruos de Halloween.",
+    "tip": "Una opción dulce y crocante",
+    "alt": "Pretzels bañados en chocolate y decorados con ojos de azúcar",
+    "image": "assets/food/halloween-pretzels-monstruo.jpg",
     "credit": {
-      "author": "David Leggett",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Truffles_with_nuts_and_chocolate_dusting_in_detail.jpg",
-      "originalTitle": "File:Truffles with nuts and chocolate dusting in detail.jpg"
+      "author": "HeatherMarieKosur",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Spooky_Chocolate_Covered_Pretzels.jpg",
+      "originalTitle": "File:Spooky Chocolate Covered Pretzels.jpg"
     }
   },
   {
-    "id": "tarta-calabaza",
-    "title": "Tarta de calabaza embrujada",
+    "id": "cheesecake-halloween",
+    "title": "Cheesecake de la noche maldita",
     "category": "dulce",
-    "description": "Una tarta de calabaza con canela y especias, perfecta para el otoño de Hawkins. Sobre esta base podés dibujar una telaraña de crema o una cara de calabaza con chocolate.",
-    "tip": "Traela cortada y con una espátula",
-    "alt": "Tarta de calabaza con borde de masa",
-    "image": "assets/food/tarta-calabaza.jpg",
+    "description": "Un cheesecake decorado con calabazas naranjas, pequeños cráneos verdes y personajes espectrales, como el de la foto. Una torta cremosa con una procesión de monstruos sobre la cobertura.",
+    "tip": "Llevalo refrigerado y cortá porciones al servir",
+    "alt": "Cheesecake decorado con cráneos, calabazas y personajes de Halloween",
+    "image": "assets/food/halloween-cheesecake-halloween.jpg",
     "credit": {
-      "author": "DrKathyShaginaw",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Pumpkin_Pie_with_Cinnamon_Crust.jpg",
-      "originalTitle": "File:Pumpkin Pie with Cinnamon Crust.jpg"
+      "author": "dave g",
+      "license": "CC BY-SA 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Cheesecake_for_Halloween.jpg",
+      "originalTitle": "File:Cheesecake for Halloween.jpg"
     }
   },
   {
@@ -227,259 +227,262 @@ const FOOD_IDEAS = [
     }
   },
   {
-    "id": "salchichas-momia",
-    "title": "Salchichas momia",
+    "id": "pastel-pies",
+    "title": "Pastel de carne de pies macabros",
     "category": "salado",
-    "description": "Partí de salchichas envueltas en masa, como las de la foto, y cortá la masa en tiras para simular vendas. Dejá un hueco para dos ojos de mostaza y servilas con ketchup rojo.",
-    "tip": "Traé una salsa aparte",
-    "alt": "Salchichas pequeñas envueltas en masa horneada",
-    "image": "assets/food/salchichas-momia.jpg",
+    "description": "Pastel de carne moldeado como dos pies, con uñas de cebolla y una terminación roja de salsa de tomate. La foto muestra una preparación de Halloween que parece recién escapada del laboratorio.",
+    "tip": "Cortá porciones pequeñas para compartir",
+    "alt": "Pastel de carne con forma de dos pies humanos y salsa roja",
+    "image": "assets/food/halloween-pastel-pies.jpg",
     "credit": {
-      "author": "Photo credit: stef yau",
+      "author": "Christopher Chapman",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:American_pigs_in_blankets.jpg",
-      "originalTitle": "File:American pigs in blankets.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Feetloaf!_it%27s_what%27s_for_dinner!.jpg",
+      "originalTitle": "File:Feetloaf! it's what's for dinner!.jpg"
     }
   },
   {
     "id": "pimientos-monstruo",
-    "title": "Pimientos poseídos",
+    "title": "Mini pimientos calabaza",
     "category": "salado",
-    "description": "Pimientos rellenos de arroz, quinoa o verduras. Antes de rellenarlos, tallales ojos y una boca de monstruo; la foto muestra la base de esta versión vegetariana del banquete.",
-    "tip": "Elegí pimientos chicos para compartir",
-    "alt": "Pimientos rellenos con quinoa y verduras",
-    "image": "assets/food/pimientos-monstruo.jpg",
+    "description": "Mini pimientos anaranjados tallados con ojos y sonrisa de calabaza. En la foto acompañan al fantasma de arroz; podés rellenarlos con queso crema o hummus para servirlos como bocados fríos.",
+    "tip": "Traelos rellenos y refrigerados",
+    "alt": "Mini pimiento tallado como una calabaza en un bento de Halloween",
+    "image": "assets/food/halloween-bento-fantasma.jpg",
     "credit": {
-      "author": "Mark Bonica",
+      "author": "gamene",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Quinoa_stuffed_peppers.jpg",
-      "originalTitle": "File:Quinoa stuffed peppers.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Ghost_onigiri_bento_(4039012309).jpg",
+      "originalTitle": "File:Ghost onigiri bento (4039012309).jpg"
     }
   },
   {
-    "id": "guacamole-pantano",
-    "title": "Guacamole del pantano",
+    "id": "onigiri-gato",
+    "title": "Onigiri de gato embrujado",
     "category": "salado",
-    "description": "Un dip verde para el pantano del Otro Lado. Decorá el guacamole con ojos de aceituna, arañas y triángulos de tortilla como lápidas; la foto muestra el dip con sus nachos.",
-    "tip": "Traé los nachos en una bolsa aparte",
-    "alt": "Guacamole verde acompañado de chips de tortilla",
-    "image": "assets/food/guacamole-pantano.jpg",
+    "description": "Arroz relleno de salmón, cubierto con una fina capa de huevo violeta y decorado con queso y nori. El gato de Halloween de la foto tiene orejas puntiagudas y una mirada que vigila el banquete.",
+    "tip": "Podés adaptar el relleno a una opción vegetal",
+    "alt": "Bento de Halloween con un gato violeta de arroz, pimientos calabaza y huevos BOO",
+    "image": "assets/food/halloween-bento-gato.jpg",
     "credit": {
-      "author": "Missvain",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Guacamole_and_chips_-_Stierch.jpg",
-      "originalTitle": "File:Guacamole and chips - Stierch.jpg"
-    }
-  },
-  {
-    "id": "hummus-calabaza",
-    "title": "Hummus del aquelarre",
-    "category": "salado",
-    "description": "Usá este hummus como base, sumale calabaza asada para darle color naranja y dibujá una cara con aceitunas. Acompañalo con bastones de verduras y pan pita para picar entre hechizos.",
-    "tip": "Una opción vegetal para compartir",
-    "alt": "Hummus servido en un plato con guarniciones",
-    "image": "assets/food/hummus-calabaza.jpg",
-    "credit": {
-      "author": "Beyrouthhh at English Wikipedia",
-      "license": "CC BY 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Lebanese_style_hummus.jpg",
-      "originalTitle": "File:Lebanese style hummus.jpg"
-    }
-  },
-  {
-    "id": "nachos-cementerio",
-    "title": "Nachos del cementerio",
-    "category": "salado",
-    "description": "Armá una fuente con queso, salsa roja y nachos. Plantá algunos triángulos como lápidas y sumá arañas de aceitunas; la foto muestra la base antes de darle el toque de cementerio.",
-    "tip": "Llevá el queso y las salsas por separado",
-    "alt": "Nachos con queso fundido y jalapeños",
-    "image": "assets/food/nachos-cementerio.jpg",
-    "credit": {
-      "author": "روتانا",
-      "license": "CC BY 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Nachos_with_Melted_Cheese,_Jalapenos,_and_Tasty_Toppings.jpg",
-      "originalTitle": "File:Nachos with Melted Cheese, Jalapenos, and Tasty Toppings.jpg"
-    }
-  },
-  {
-    "id": "pasta-tentaculos",
-    "title": "Tentáculos del Otro Lado",
-    "category": "salado",
-    "description": "Pasta negra con una salsa roja intensa para evocar los tentáculos del Mind Flayer. La foto muestra la pasta oscura; podés servirla en vasitos para que sea fácil de comer de pie.",
-    "tip": "Vasitos y tenedores para cada porción",
-    "alt": "Pasta de color negro servida en un plato",
-    "image": "assets/food/pasta-tentaculos.jpg",
-    "credit": {
-      "author": "Anne Oeldorf from State College, PA, USA",
+      "author": "gamene",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Black_pasta.jpg",
-      "originalTitle": "File:Black pasta.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Spooky_cat_onigiri_bento_(4054741302).jpg",
+      "originalTitle": "File:Spooky cat onigiri bento (4054741302).jpg"
     }
   },
   {
-    "id": "escobas-bruja",
-    "title": "Dedos de queso crujientes",
+    "id": "arroz-telarana",
+    "title": "Arroz con telaraña",
     "category": "salado",
-    "description": "Bastones de mozzarella rebozados, como los de la foto, con salsa de tomate para un efecto sangriento. Una almendra en la punta puede convertirse en la uña de cada dedo monstruoso.",
-    "tip": "Mejor recién calentados",
-    "alt": "Bastones de mozzarella fritos junto a una salsa",
-    "image": "assets/food/escobas-bruja.jpg",
+    "description": "Una capa de arroz sobre tofu condimentado, con una telaraña recortada en alga nori. La foto muestra cómo queda terminado; usá arañas comestibles para decorar la bandeja.",
+    "tip": "Servilo en porciones individuales",
+    "alt": "Bento con una telaraña de nori sobre arroz y verduras de colores",
+    "image": "assets/food/halloween-arroz-telarana.jpg",
     "credit": {
-      "author": "Francesc Fort",
+      "author": "gamene",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Spider_web_bento_(4037858009).jpg",
+      "originalTitle": "File:Spider web bento (4037858009).jpg"
+    }
+  },
+  {
+    "id": "muffins-arana",
+    "title": "Muffins salados de araña",
+    "category": "salado",
+    "description": "Muffins de maíz y jalapeño con una araña de nori sobre la superficie. El de la foto ocupa el frente del bento: amarillo intenso, patas oscuras y un toque picante para espantar a los distraídos.",
+    "tip": "Avisá si la preparación es picante",
+    "alt": "Muffin salado amarillo decorado con una araña, acompañado de un huevo fantasma",
+    "image": "assets/food/halloween-bento-arana.jpg",
+    "credit": {
+      "author": "gamene",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Spider_muffin_bento_(4051218539).jpg",
+      "originalTitle": "File:Spider muffin bento (4051218539).jpg"
+    }
+  },
+  {
+    "id": "huevos-boo",
+    "title": "Huevitos BOO",
+    "category": "salado",
+    "description": "Huevos de codorniz con letras de nori que forman BOO, como los que acompañan al gato violeta en la foto. Sumales pequeñas caras de fantasma para completar una bandeja llena de sustos.",
+    "tip": "Mantenelos fríos hasta servir",
+    "alt": "Huevos pequeños decorados con las letras BOO dentro de un bento de Halloween",
+    "image": "assets/food/halloween-bento-gato.jpg",
+    "credit": {
+      "author": "gamene",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Spooky_cat_onigiri_bento_(4054741302).jpg",
+      "originalTitle": "File:Spooky cat onigiri bento (4054741302).jpg"
+    }
+  },
+  {
+    "id": "hamburguesas-murcielago",
+    "title": "Mini hamburguesas de murciélago",
+    "category": "salado",
+    "description": "Mini hamburguesas de Halloween con detalles negros y banderines de murciélago, como las de la foto. Hacelas pequeñas para compartir y separá las salsas hasta la hora de servir.",
+    "tip": "Una mini hamburguesa por porción",
+    "alt": "Mini hamburguesas de Halloween decoradas con murciélagos negros",
+    "image": "assets/food/halloween-hamburguesas-murcielago.jpg",
+    "credit": {
+      "author": "Peachyeung316",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Mozzarella_sticks_-_Toro.jpg",
-      "originalTitle": "File:Mozzarella sticks - Toro.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Shapes_Halloween_Mini_Hamburger_at_HKCEC.jpg",
+      "originalTitle": "File:Shapes Halloween Mini Hamburger at HKCEC.jpg"
     }
   },
   {
-    "id": "empanadas-calabaza",
-    "title": "Empanadas del portal",
+    "id": "sandwiches-ataud",
+    "title": "Sándwiches de ataúd",
     "category": "salado",
-    "description": "Empanadas de carne, queso o verduras con marcas de caras de calabaza en la masa. La foto muestra empanadas clásicas: podés decorar cada sabor con una cara distinta antes de hornear.",
-    "tip": "Identificá el relleno de cada tanda",
-    "alt": "Empanadas argentinas con su relleno a la vista",
-    "image": "assets/food/empanadas-calabaza.jpg",
+    "description": "Sándwiches de pan cortado como ataúdes, con una cruz de queso en la tapa. En el buffet de la foto forman parte de una mesa de Halloween con calabazas, monstruos y otros bocados macabros.",
+    "tip": "Podés preparar distintos rellenos",
+    "alt": "Buffet de Halloween con sándwiches de ataúd y platos decorados",
+    "image": "assets/food/halloween-sandwiches-ataud.jpg",
     "credit": {
-      "author": "jamesonf",
+      "author": "kinwart",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Empanadas_Argentine_style.jpg",
-      "originalTitle": "File:Empanadas Argentine style.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Food_Halloween_party_(3024302438).jpg",
+      "originalTitle": "File:Food Halloween party (3024302438).jpg"
     }
   },
   {
-    "id": "limonada-sangrienta",
-    "title": "Limonada sangrienta",
+    "id": "shot-cerebro-sangriento",
+    "title": "Shots de cerebro sangriento",
     "category": "bebida",
-    "description": "Limonada de frutilla bien roja, como la de la foto, servida con hielo y gomitas de gusanos. Un borde de salsa de frutilla en los vasos completa esta pócima sin alcohol.",
-    "tip": "Traela bien fría en una jarra",
-    "alt": "Limonada de frutilla de color rosado rojizo",
-    "image": "assets/food/limonada-sangrienta.jpg",
+    "description": "El clásico Brain Hemorrhage: licor de durazno, crema irlandesa y granadina. La crema forma el cerebro y el jarabe rojo completa el efecto macabro que se ve en estos vasos.",
+    "tip": "Contiene alcohol · serví porciones pequeñas",
+    "alt": "Dos shots con una formación blanca similar a cerebros y granadina roja",
+    "image": "assets/food/halloween-shot-cerebro-sangriento.jpg",
     "credit": {
-      "author": "E4024",
+      "author": "Grant Mitchell (Grant Mitchell)",
+      "license": "CC BY 2.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:P1020647_(brain_haemorrhage).jpg",
+      "originalTitle": "File:P1020647 (brain haemorrhage).jpg"
+    }
+  },
+  {
+    "id": "cerebro-laboratorio",
+    "title": "Cerebro del laboratorio",
+    "category": "bebida",
+    "description": "Un Monkey Brain con vodka, crema irlandesa, lima y granadina. El resultado de la foto parece un cerebro flotando en líquido rojo: perfecto para un brindis de laboratorio.",
+    "tip": "Contiene alcohol · traé vasos pequeños",
+    "alt": "Cóctel rojo con una formación cremosa que parece un cerebro flotante",
+    "image": "assets/food/halloween-cerebro-laboratorio.jpg",
+    "credit": {
+      "author": "VivaLaPinateria",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Lemonade_with_strawberry.jpg",
-      "originalTitle": "File:Lemonade with strawberry.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Monkeybrain.jpg",
+      "originalTitle": "File:Monkeybrain.jpg"
     }
   },
   {
-    "id": "jugo-vampiro",
-    "title": "Elixir de vampiro",
+    "id": "zombie-calavera",
+    "title": "Zombie en calavera",
     "category": "bebida",
-    "description": "Jugo de arándanos rojos con un toque de limón y soda para un elixir oscuro sin alcohol. La foto muestra el jugo base; servilo en vasos transparentes con una etiqueta de sangre de vampiro.",
-    "tip": "Llevá la soda aparte para conservar el gas",
-    "alt": "Jugo rojo de arándanos en un vaso",
-    "image": "assets/food/jugo-vampiro.jpg",
+    "description": "Un cóctel de ron y frutas tropicales servido en un vaso con forma de calavera. La foto muestra la presentación del Zombie: un cráneo lleno de una pócima anaranjada.",
+    "tip": "Contiene alcohol · preparalo en una jarra para repartir",
+    "alt": "Cóctel Zombie anaranjado servido en un vaso de calavera",
+    "image": "assets/food/halloween-zombie-calavera.jpg",
     "credit": {
-      "author": "Lisa Pinehill from Osaka, Japan",
-      "license": "CC BY-SA 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Cranberry_juice.jpg",
-      "originalTitle": "File:Cranberry juice.jpg"
+      "author": "Pitel",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:ZombieCocktail.jpg",
+      "originalTitle": "File:ZombieCocktail.jpg"
     }
   },
   {
-    "id": "batido-monstruo",
-    "title": "Batido del Demogorgon",
+    "id": "cerebro-vampiro",
+    "title": "Cerebro de vampiro",
     "category": "bebida",
-    "description": "Un smoothie verde de fruta y hojas verdes, como el de la foto, para una pócima monstruosa sin alcohol. Dibujá ojos y colmillos en los vasos y agregá gomitas como tentáculos.",
-    "tip": "Servilo frío y agitá antes de repartir",
-    "alt": "Batido verde servido en un vaso",
-    "image": "assets/food/batido-monstruo.jpg",
+    "description": "El cóctel Cervelle de Singe mezcla vodka, crema irlandesa y granadina. La foto muestra un cerebro pálido suspendido en una bebida roja intensa, listo para servir como un pequeño espécimen.",
+    "tip": "Contiene alcohol · serví en vasos transparentes",
+    "alt": "Shot rojo con una formación blanca similar a un cerebro",
+    "image": "assets/food/halloween-cerebro-vampiro.jpg",
     "credit": {
-      "author": "Lablascovegmenu from London",
+      "author": "Irkizar",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Copyright_tags#Public_domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Cervelle_de_Singe_(Cocktail).jpg",
+      "originalTitle": "File:Cervelle de Singe (Cocktail).jpg"
+    }
+  },
+  {
+    "id": "ponche-tropical-ojos",
+    "title": "Ponche tropical de ojos",
+    "category": "bebida",
+    "description": "Una variante del ponche de la foto, con jugo de ananá y naranja. Conservá los ojos comestibles flotantes y servilo en un bol transparente para mostrar la decoración terminada.",
+    "tip": "Sin alcohol · traé un cucharón y vasos",
+    "alt": "Ponche de Halloween con ojos comestibles flotando",
+    "image": "assets/food/ponche-ojos.jpg",
+    "credit": {
+      "author": "Bart Everson",
       "license": "CC BY 2.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Green_smoothie_(8222465502).jpg",
-      "originalTitle": "File:Green smoothie (8222465502).jpg"
-    }
+      "source": "https://commons.wikimedia.org/wiki/File:Eyeball_Punch.jpg",
+      "originalTitle": "File:Eyeball Punch.jpg"
+    },
+    "photoNote": "Referencia de decoración: ponche de ojos. Variante tropical."
   },
   {
-    "id": "latte-calabaza",
-    "title": "Frappé de calabaza maldita",
+    "id": "pocion-azul",
+    "title": "Poción azul del Otro Lado",
     "category": "bebida",
-    "description": "Café con leche, calabaza y especias, batido con hielo y coronado con crema. Sumale una telaraña de cacao para una pócima fría, aromática y bien otoñal.",
-    "tip": "También puede prepararse descafeinado",
-    "alt": "Frappé de calabaza con crema en un vaso transparente",
-    "image": "assets/food/latte-calabaza.jpg",
+    "description": "Una bebida azul cítrica con hielo, presentada como una pócima humeante. La foto muestra el efecto de niebla sobre el vaso; para llevar a la fiesta, prepará el mocktail azul listo para servir.",
+    "tip": "Sin alcohol · el efecto de niebla es solo una referencia visual",
+    "alt": "Bebida azul con hielo y una densa niebla que sale del vaso",
+    "image": "assets/food/halloween-pocion-azul.jpg",
     "credit": {
-      "author": "Mr White",
+      "author": "Nina Ladygina-Glazounova",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Starbucks_Pumpkin_Spice_Latte_Frappuccino.jpg",
-      "originalTitle": "File:Starbucks Pumpkin Spice Latte Frappuccino.jpg"
+      "source": "https://commons.wikimedia.org/wiki/File:Solid_form_of_carbon_dioxide_in_a_drink.jpg",
+      "originalTitle": "File:Solid form of carbon dioxide in a drink.jpg"
     }
   },
   {
-    "id": "sidra-embrujada",
-    "title": "Sidra de la casa embrujada",
+    "id": "elixir-calavera",
+    "title": "Elixir de calavera sin alcohol",
     "category": "bebida",
-    "description": "Sidra de manzana con rodajas de fruta y canela para brindar del otro lado. La foto muestra sidra y jugo de manzana; si querés una versión sin alcohol, elegí el jugo y sumale soda.",
-    "tip": "Marcá si la jarra tiene alcohol",
-    "alt": "Vasos de sidra y jugo de manzana",
-    "image": "assets/food/sidra-embrujada.jpg",
+    "description": "Una variante sin alcohol del Zombie de la foto: jugos de naranja y ananá con ginger ale, servidos en un vaso de calavera. El recipiente convierte el brindis en una escena de Halloween.",
+    "tip": "Sin alcohol · traé vasos de calavera reutilizables",
+    "alt": "Bebida anaranjada servida en un vaso con forma de calavera",
+    "image": "assets/food/halloween-zombie-calavera.jpg",
     "credit": {
-      "author": "Autor indicado en Wikimedia Commons",
-      "license": "CC BY-SA 3.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "source": "https://commons.wikimedia.org/wiki/File:Cider_and_apple_juice.jpg",
-      "originalTitle": "File:Cider and apple juice.jpg"
-    }
-  },
-  {
-    "id": "chocolate-caliente",
-    "title": "Chocolate del bosque oscuro",
-    "category": "bebida",
-    "description": "Chocolate caliente espeso con malvaviscos blancos convertidos en fantasmas: dos puntitos de chocolate para los ojos y listo. La foto muestra el chocolate que podés decorar al servir.",
-    "tip": "Llevalo en un termo y traé tazas",
-    "alt": "Taza de chocolate caliente",
-    "image": "assets/food/chocolate-caliente.jpg",
-    "credit": {
-      "author": "AlekhyaDas",
+      "author": "Pitel",
       "license": "CC BY-SA 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Hot_chocolate_drink.jpg",
-      "originalTitle": "File:Hot chocolate drink.jpg"
-    }
+      "source": "https://commons.wikimedia.org/wiki/File:ZombieCocktail.jpg",
+      "originalTitle": "File:ZombieCocktail.jpg"
+    },
+    "photoNote": "Referencia de presentación: Zombie en calavera. Variante sin alcohol."
   },
   {
-    "id": "sangria-roja",
-    "title": "Sangría del portal rojo",
+    "id": "cerebro-gelatina",
+    "title": "Cerebros de gelatina sin alcohol",
     "category": "bebida",
-    "description": "Sangría de vino tinto y frutas con un color digno del cielo del Otro Lado. Decorá la jarra con ojos de uva; también podés reemplazar el vino por jugo de uva para una versión sin alcohol.",
-    "tip": "Etiquetá claramente la versión con alcohol",
-    "alt": "Vaso de sangría roja con frutas",
-    "image": "assets/food/sangria-roja.jpg",
+    "description": "Una variante sin alcohol inspirada en el cerebro de la foto: jugo rojo con pequeños cerebros de gelatina blanca o de coco. Preparalos en moldes y servilos dentro de vasos transparentes.",
+    "tip": "Sin alcohol · llevalo refrigerado",
+    "alt": "Shot rojo con una formación blanca similar a un cerebro, como referencia de presentación",
+    "image": "assets/food/halloween-cerebro-vampiro.jpg",
     "credit": {
-      "author": "Frank K.",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Sangria_in_a_tall_skinny_glass_in_Malaga.jpg",
-      "originalTitle": "File:Sangria in a tall skinny glass in Malaga.jpg"
-    }
-  },
-  {
-    "id": "pocion-morada",
-    "title": "Pócima de medianoche",
-    "category": "bebida",
-    "description": "Batido de moras y yogur, como el de la foto, para una pócima violeta sin alcohol. Sumale un remolino de crema y ojos de azúcar justo antes de servir para despertar al monstruo.",
-    "tip": "Mantenelo refrigerado hasta servir",
-    "alt": "Batido de moras de color violeta con hojas de menta",
-    "image": "assets/food/pocion-morada.jpg",
-    "credit": {
-      "author": "Ryan Snyder",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Blackberry_Mint_Smoothie_(13006043115).jpg",
-      "originalTitle": "File:Blackberry Mint Smoothie (13006043115).jpg"
-    }
+      "author": "Irkizar",
+      "license": "Public domain",
+      "licenseUrl": "https://commons.wikimedia.org/wiki/Commons:Copyright_tags#Public_domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Cervelle_de_Singe_(Cocktail).jpg",
+      "originalTitle": "File:Cervelle de Singe (Cocktail).jpg"
+    },
+    "photoNote": "Referencia de presentación: cóctel cerebral. Variante de gelatina sin alcohol."
   }
 ];

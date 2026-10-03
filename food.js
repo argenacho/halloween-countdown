@@ -62,6 +62,9 @@ function renderIdeas() {
     image.width = 1100;
     image.height = 825;
     figure.append(image);
+    if (idea.photoNote) {
+      figure.append(makeElement('figcaption', '', idea.photoNote));
+    }
     const info = makeElement('div', 'food-info');
     info.append(makeElement('p', 'food-category', categoryLabels[idea.category]));
     info.append(makeElement('h3', '', idea.title));

@@ -3,79 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#191a17">
+  <meta name="theme-color" content="#07080c">
   <meta name="description" content="Halloween en Casa 199. Te esperamos el 31 de octubre a las 20:00. Disfraz obligatorio. Confirmá tu asistencia acá.">
   <meta property="og:title" content="Halloween en la 199 · Estás invitado">
   <meta property="og:description" content="31 de octubre · 20:00 hs · Casa 199. Disfraz obligatorio. Confirmá tu asistencia.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://argenacho.github.io/halloween-countdown/assets/upside-down.png">
   <title>Halloween en la 199 · Estás invitado</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23f17a39'/%3E%3Cpath d='M16 48V29a16 16 0 0 1 32 0v19l-8-5-8 5-8-5z' fill='%23f2eddf'/%3E%3Cpath d='M25 29v7m14-7v7' stroke='%23191a17' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%2307080c'/%3E%3Cpath d='M15 12v40m34-40v40M15 32h34' fill='none' stroke='%23ef343a' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="assets/upside-down.png">
+  <link rel="stylesheet" href="styles.css?v=upside-down-1">
   <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#contenido">Ir al contenido</a>
+  <div class="scene" aria-hidden="true">
+    <img class="scene-image" src="assets/upside-down.png" alt="" fetchpriority="high">
+    <div class="scene-shade"></div>
+    <div class="spores"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
   <header class="site-header wrap">
-    <a class="wordmark" href="#inicio" aria-label="Halloween en Casa 199, inicio"><span class="mark" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></span> CASA 199</a>
-    <span class="header-note">Una invitación del otro mundo</span>
+    <a class="wordmark" href="#inicio" aria-label="Halloween en Casa 199, inicio"><span class="signal" aria-hidden="true"><i></i><i></i><i></i></span> CASA 199</a>
+    <span class="header-note">Señal detectada · 31.10.2026</span>
     <a class="nav-link" href="#rsvp">Confirmar asistencia <span aria-hidden="true">↗</span></a>
   </header>
   <main id="contenido">
     <section class="hero wrap" id="inicio" aria-labelledby="titulo">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✦</span> Estás oficialmente invitado</p>
-        <h1 id="titulo">Halloween<br><span>en la <em>199.</em></span></h1>
-        <p class="hero-description">Hay noches que no se olvidan.<br>Y esta la queremos compartir con vos.</p>
-        <a class="button button-orange" href="#rsvp">Me sumo a la noche <span aria-hidden="true">↗</span></a>
+        <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span> Transmisión desde el otro lado</p>
+        <h1 id="titulo"><span>Halloween</span><span>Casa 199</span></h1>
+        <p class="hero-description">Algo se despertó del otro lado.<br>Este Halloween, la puerta se abre para vos.</p>
+        <a class="button button-red" href="#rsvp">Cruzar al otro lado <span aria-hidden="true">↗</span></a>
         <p class="hero-footnote">31 de octubre · 20:00 hs · Casa 199</p>
       </div>
-      <div class="artwork" aria-hidden="true">
-        <div class="orbit-label">SOLO PARA ALMAS CON DISFRAZ</div>
-        <svg class="ghost-art" viewBox="0 0 520 560" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="halftone" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#191a17" opacity=".15"/></pattern>
-          </defs>
-          <circle cx="260" cy="270" r="211" fill="#ee783c"/>
-          <circle cx="260" cy="270" r="211" fill="url(#halftone)"/>
-          <circle cx="260" cy="270" r="228" stroke="#ee783c" stroke-opacity=".35" fill="none"/>
-          <path d="M56 170q20-23 37-5l-1-17 12 9 9-12 2 18q24-7 36 16-22-6-32 12l-14-8-16 5q-9-20-33-18ZM353 87q19-16 33-3l1-14 9 9 9-10 1 15q22-4 30 16-19-7-29 8l-12-8-14 4q-6-17-28-17Z" fill="#191a17"/>
-          <ellipse cx="273" cy="493" rx="110" ry="16" fill="#191a17" opacity=".3"/>
-          <g class="floating-ghost">
-            <path d="M153 438c-12-70-11-101-11-164 0-83 44-143 118-143 79 0 119 60 120 135 0 50 10 91 27 153-26 11-45 4-57-14-15 24-35 35-57 17-16 23-37 23-54 3-16 22-37 22-51 4-8 15-24 16-35 9Z" fill="#f2eddf" stroke="#191a17" stroke-width="4" stroke-linejoin="round"/>
-            <path d="M184 282c-5-65 12-101 48-119M366 284c-10 20-22 30-38 31" fill="none" stroke="#191a17" stroke-opacity=".2" stroke-width="4" stroke-linecap="round"/>
-            <ellipse cx="231" cy="259" rx="13" ry="24" fill="#191a17" transform="rotate(-9 231 259)"/>
-            <ellipse cx="296" cy="257" rx="13" ry="24" fill="#191a17" transform="rotate(9 296 257)"/>
-            <ellipse cx="264" cy="312" rx="16" ry="22" fill="#191a17"/>
-            <path d="M174 340q33 28 59 2M302 345q28 18 52-7" fill="none" stroke="#191a17" stroke-width="4" stroke-linecap="round"/>
-            <path d="m207 358 95-15 8 63-95 15Z" fill="#ee783c" stroke="#191a17" stroke-width="3"/>
-            <path d="m207 358 52 26 43-41" fill="none" stroke="#191a17" stroke-width="3"/>
-            <circle cx="261" cy="382" r="8" fill="#191a17"/>
-          </g>
-          <g fill="#f2eddf"><path d="m63 308 5 15 15 5-15 5-5 15-5-15-15-5 15-5ZM413 329l6 19 19 6-19 6-6 19-6-19-19-6 19-6ZM344 482l4 12 12 4-12 4-4 12-4-12-12-4 12-4Z"/><circle cx="99" cy="435" r="3"/><circle cx="433" cy="226" r="3"/></g>
-        </svg>
-        <div class="costume-stamp"><span>Dress code</span><strong>DISFRAZ<br>OBLIGATORIO</strong><span>Sin excepciones terrenales</span></div>
-      </div>
+      <div class="portal-note" aria-hidden="true"><span>ANOMALÍA DETECTADA</span><span>UBICACIÓN / CASA 199</span><div class="portal-crosshair"></div></div>
+      <div class="costume-stamp"><span>Protocolo de ingreso</span><strong>Disfraz obligatorio</strong></div>
     </section>
     <section class="event-strip" aria-label="Datos de la fiesta">
       <div class="event-grid wrap">
-        <div class="event-detail"><span class="detail-number" aria-hidden="true">01 /</span><div><p>La fecha</p><h2><time datetime="2026-10-31">31 de octubre</time></h2><span>Sábado, 2026</span></div></div>
-        <div class="event-detail"><span class="detail-number" aria-hidden="true">02 /</span><div><p>La hora</p><h2><time datetime="20:00">20:00 hs</time></h2><span>Cuando empieza la oscuridad</span></div></div>
-        <div class="event-detail"><span class="detail-number" aria-hidden="true">03 /</span><div><p>El lugar</p><h2>Casa 199</h2><span>Nos encontramos ahí</span></div></div>
+        <div class="event-detail"><span class="detail-number" aria-hidden="true">01</span><div><p>La fecha</p><h2><time datetime="2026-10-31">31 de octubre</time></h2><span>Sábado, 2026</span></div></div>
+        <div class="event-detail"><span class="detail-number" aria-hidden="true">02</span><div><p>La hora</p><h2><time datetime="20:00">20:00 hs</time></h2><span>Comienza la transmisión</span></div></div>
+        <div class="event-detail"><span class="detail-number" aria-hidden="true">03</span><div><p>El lugar</p><h2>Casa 199</h2><span>La puerta al otro lado</span></div></div>
       </div>
     </section>
     <section class="invitation wrap" aria-labelledby="invitacion-titulo">
-      <p class="eyebrow">Una noche. Todos nuestros monstruos.</p>
-      <h2 id="invitacion-titulo">Dejá tu lado normal<br><em>en la puerta.</em></h2>
-      <p>Vení como bruja, vampiro, fantasma o como ese personaje que siempre quisiste ser. Lo único obligatorio es el disfraz. El resto de la noche lo hacemos entre todos.</p>
-      <span class="invitation-star" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 2v28M2 16h28M6 6l20 20M6 26 26 6"/></svg></span>
+      <p class="eyebrow">La realidad está a punto de cambiar</p>
+      <h2 id="invitacion-titulo">El portal se abre.<br><em>¿Vas a cruzar?</em></h2>
+      <p>Las luces fallan. Algo se mueve entre las sombras. El 31 de octubre nos encontramos en Casa 199 para una noche fuera de este mundo. Vení con tu mejor disfraz. El resto lo descubrimos del otro lado.</p>
+      <div class="dimension-divider" aria-hidden="true"><span></span><b>199</b><span></span></div>
     </section>
     <section class="rsvp-section" id="rsvp" aria-labelledby="rsvp-titulo">
       <div class="rsvp-grid wrap">
         <div class="rsvp-copy">
-          <p class="eyebrow">RSVP · Confirmá tu asistencia</p>
-          <h2 id="rsvp-titulo">¿Contamos<br><em>con tu alma?</em></h2>
-          <p>Decinos quién sos y cuántas personas vienen con vos. Así sabemos cuántos monstruos esperar.</p>
-          <div class="rsvp-note"><span aria-hidden="true">✦</span><p>El 31 de octubre, desde las 20:00.<br><strong>Te esperamos en Casa 199.</strong></p></div>
+          <p class="eyebrow">Registro de sobrevivientes · RSVP</p>
+          <h2 id="rsvp-titulo">¿Te animás<br><em>a entrar?</em></h2>
+          <p>Decinos quién sos y cuántas personas vienen con vos. Así sabemos a quién esperar del otro lado.</p>
+          <div class="rsvp-note"><span class="note-symbol" aria-hidden="true">!</span><p>El 31 de octubre, desde las 20:00.<br><strong>Te esperamos en Casa 199.</strong></p></div>
         </div>
         <form class="rsvp-form" id="rsvp-form" aria-label="Confirmar asistencia a la fiesta">
           <div class="field"><label for="nombre">Tu nombre <span aria-hidden="true">*</span></label><input id="nombre" name="nombre" type="text" autocomplete="name" maxlength="100" placeholder="¿Quién cruza al otro lado?" required></div>
@@ -89,6 +72,6 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer"><div class="wrap"><p>Nos vemos <em>del otro lado.</em></p><div class="footer-meta"><span>HALLOWEEN EN LA 199</span><span>31 OCT · 20:00 HS</span><a href="#inicio">Volver arriba ↑</a></div></div></footer>
+  <footer class="site-footer"><div class="wrap"><p>Nos vemos<br><em>del otro lado.</em></p><div class="footer-meta"><span>HALLOWEEN EN LA 199</span><span>31 OCT · 20:00 HS</span><a href="#inicio">Volver arriba ↑</a></div></div></footer>
 </body>
 </html>

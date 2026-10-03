@@ -62,6 +62,7 @@ form.addEventListener('submit', async (event) => {
     if (isDemo) {
       await new Promise((resolve) => setTimeout(resolve, 650));
       try {
+        sessionStorage.removeItem('halloween199.food');
         sessionStorage.setItem('halloween199.rsvp', JSON.stringify({ name, people, demo: true }));
       } catch (error) {
         // The demo can render without personal details when storage is unavailable.
@@ -88,6 +89,7 @@ form.addEventListener('submit', async (event) => {
     }
     showStatus(`¡Listo, ${name}! Confirmamos ${people === 1 ? 'tu asistencia' : `la asistencia de ${people} personas`}. Nos vemos el 31 en Casa 199. No te olvides del disfraz.`, 'success');
     try {
+      sessionStorage.removeItem('halloween199.food');
       sessionStorage.setItem('halloween199.rsvp', JSON.stringify({ name, people }));
     } catch (error) {
       // The receipt can still be displayed without personal details when storage is unavailable.

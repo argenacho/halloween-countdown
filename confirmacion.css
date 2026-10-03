@@ -3,7 +3,8 @@
 .confirmation-scene img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
 .confirmation-scene > div { position: absolute; inset: 0; background: linear-gradient(0deg, #080509f5, #08050975 45%, #13030815 85%), radial-gradient(ellipse at center 70%, #0c050980, transparent 65%); }
 .confirmation-body .site-header { flex-shrink: 0; }
-.confirmation-main { position: relative; flex: 1; display: flex; align-items: center; justify-content: center; padding-block: 160px 65px; text-align: center; }
+.confirmation-main { position: relative; flex: 1; }
+.confirmation-hero { display: flex; align-items: center; justify-content: center; padding-block: 160px 65px; text-align: center; }
 .confirmation-content { width: min(650px, 100%); }
 .confirmation-content .eyebrow { color: #ffc6cb; margin-bottom: 24px; }
 .confirmation-content h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: clamp(48px, 6.3vw, 82px); line-height: 1.06; letter-spacing: -.055em; margin: 0 0 25px; text-shadow: 0 3px 30px #0009; }
@@ -17,10 +18,10 @@
 .receipt-costume { font-size: 12px; color: #e8c0c8; margin-bottom: 26px; line-height: 1.8; }
 .receipt-costume strong { color: #fff; font-weight: 400; }
 .confirmation-footer { position: relative; display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid #ffffff24; padding-block: 22px; font-family: 'Courier New', monospace; font-size: 9px; color: #dcc1c9; letter-spacing: .08em; }
-@media (min-height: 950px) { .confirmation-main { padding-top: 220px; } }
+@media (min-height: 950px) { .confirmation-hero { padding-top: 220px; } }
 @media (max-width: 620px) {
   .confirmation-scene img { object-position: 50% 20%; }
-  .confirmation-main { padding-block: 160px 50px; }
+  .confirmation-hero { padding-block: 160px 50px; }
   .confirmation-content .eyebrow { font-size: 9px; }
   .confirmation-content h1 { font-size: clamp(42px, 12vw, 62px); }
   .receipt-message { font-size: 14px; }

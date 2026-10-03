@@ -7,9 +7,12 @@
   <meta name="robots" content="noindex">
   <title>El otro lado te espera · Halloween en Casa 199</title>
   <link rel="stylesheet" href="styles.css?v=upside-down-2">
-  <link rel="stylesheet" href="confirmacion.css">
+  <link rel="stylesheet" href="confirmacion.css?v=food-1">
+  <link rel="stylesheet" href="food.css?v=food-1">
   <link rel="preload" as="image" href="assets/mind-flayer.png">
   <script src="confirmacion.js?v=rsvp-demo-1" defer></script>
+  <script src="food-ideas.js?v=food-1" defer></script>
+  <script src="food.js?v=food-1" defer></script>
 </head>
 <body class="confirmation-body">
   <a class="skip-link" href="#confirmacion">Ir al mensaje</a>
@@ -17,9 +20,10 @@
   <header class="site-header wrap">
     <a class="wordmark" href="./" aria-label="Volver a Halloween en Casa 199"><span class="signal" aria-hidden="true"><i></i><i></i><i></i></span> CASA 199</a>
     <span class="header-note">La señal llegó al otro lado</span>
-    <a class="nav-link" href="./">La invitación <span aria-hidden="true">↗</span></a>
+    <a class="nav-link" href="#comida">Qué voy a llevar <span aria-hidden="true">↗</span></a>
   </header>
-  <main class="confirmation-main wrap" id="confirmacion">
+  <main class="confirmation-main" id="confirmacion">
+    <div class="confirmation-hero wrap">
     <div class="confirmation-content">
       <p class="eyebrow" id="receipt-label">Halloween en la 199</p>
       <h1 id="receipt-title">El otro lado<br><em>te espera.</em></h1>
@@ -31,9 +35,35 @@
         <div><span>El lugar</span><strong>Casa 199</strong></div>
       </div>
       <p class="receipt-costume">No te olvides: <strong>disfraz obligatorio.</strong></p>
-      <a class="button button-red" href="./#rsvp">Volver a la invitación <span aria-hidden="true">↗</span></a>
+      <a class="button button-red" href="#comida">Elegir qué voy a llevar <span aria-hidden="true">↗</span></a>
       <noscript><p class="receipt-message">Habilitá JavaScript para ver los detalles de tu confirmación.</p></noscript>
     </div>
+    </div>
+    <section class="food-section wrap" id="comida" aria-labelledby="food-title">
+      <div class="food-heading">
+        <div><p class="eyebrow">Un aporte para el banquete</p><h2 id="food-title">¿Qué traés<br><em>del otro lado?</em></h2></div>
+        <p>Algo dulce, algo salado o una pócima para brindar. Mirá las ideas, elegí una o sorprendé a todos con la tuya.</p>
+      </div>
+      <div class="food-toolbar">
+        <div class="food-filters" role="group" aria-label="Filtrar ideas por tipo">
+          <button type="button" data-category="all" aria-pressed="true">Todas</button>
+          <button type="button" data-category="dulce" aria-pressed="false">Dulce</button>
+          <button type="button" data-category="salado" aria-pressed="false">Salado</button>
+          <button type="button" data-category="bebida" aria-pressed="false">Bebidas</button>
+        </div>
+        <div class="food-controls"><span id="food-counter" aria-live="polite"></span><button type="button" id="food-prev" aria-label="Ver idea anterior">←</button><button type="button" id="food-next" aria-label="Ver idea siguiente">→</button></div>
+      </div>
+      <div class="food-track" id="food-track" tabindex="0" role="region" aria-roledescription="carrusel" aria-label="Ideas de comida y bebidas de Halloween"></div>
+      <p class="food-swipe-hint">Deslizá para ver más ideas o usá las flechas.</p>
+      <div class="food-choice" id="food-choice" hidden>
+        <div><p class="eyebrow">Tu aporte para la noche</p><h3 id="food-choice-title"></h3><p id="food-choice-help">Podés cambiar de idea antes de guardar.</p></div>
+        <button class="button button-red" type="button" id="food-save">Guardar elección de prueba <span aria-hidden="true">↗</span></button>
+      </div>
+      <p class="food-status" id="food-status" role="status" aria-live="polite"></p>
+      <details class="food-custom"><summary>Tengo otra idea</summary><form id="food-custom-form"><label for="food-custom-name">¿Qué vas a traer?</label><div><input id="food-custom-name" name="food" maxlength="120" placeholder="Ej.: sándwiches con forma de ataúd" required><button class="button button-dark" type="submit">Elegir mi idea</button></div></form></details>
+      <p class="food-demo-note">Modo demostración: tu elección se mantiene solo en esta pestaña. No se envía a quien organiza la fiesta.</p>
+      <noscript><p class="receipt-message">Habilitá JavaScript para explorar el carrusel y elegir qué llevar.</p></noscript>
+    </section>
   </main>
   <footer class="confirmation-footer wrap"><span>HALLOWEEN · CASA 199</span><span>31.10.2026 · DEL OTRO LADO</span></footer>
 </body>

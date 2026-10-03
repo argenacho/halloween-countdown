@@ -1,0 +1,67 @@
+.food-section { padding: 45px 0 70px; scroll-margin-top: 25px; }
+.food-heading { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: end; margin-bottom: 35px; }
+.food-heading .eyebrow { margin-bottom: 16px; color: #efa0aa; }
+.food-heading h2 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(40px, 4.4vw, 60px); font-weight: 400; line-height: 1.1; letter-spacing: -.04em; margin: 0; }
+.food-heading h2 em { color: #ff9da6; font-weight: 400; }
+.food-heading > p { max-width: 400px; margin: 0 0 3px auto; color: #e7cbd2; font-size: 14px; line-height: 1.9; }
+.food-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 15px; margin-bottom: 20px; }
+.food-filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.food-filters button { min-height: 42px; padding: 10px 18px; background: #160d16; color: #ecd8e0; border: 1px solid #744454; font-size: 12px; cursor: pointer; }
+.food-filters button[aria-pressed="true"] { background: #a52639; border-color: #e85f76; color: #fff; }
+.food-controls { display: flex; align-items: center; gap: 9px; }
+.food-controls > span { font-family: 'Courier New', monospace; font-size: 12px; color: #f3ccd5; margin-right: 8px; white-space: nowrap; }
+.food-controls button { width: 44px; height: 44px; display: grid; place-items: center; background: #160d16; border: 1px solid #744454; color: #fff; cursor: pointer; font-size: 23px; }
+.food-controls button:disabled { opacity: .35; cursor: default; }
+.food-track { display: flex; gap: 20px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; border: 1px solid #744454; background: #0c0a10; }
+.food-track::-webkit-scrollbar { display: none; }
+.food-card { flex: 0 0 100%; min-width: 0; display: grid; grid-template-columns: 1.15fr 1fr; scroll-snap-align: start; scroll-snap-stop: always; }
+.food-photo { min-width: 0; position: relative; margin: 0; background: #18121a; overflow: hidden; }
+.food-photo img { display: block; width: 100%; height: 100%; min-height: 425px; object-fit: cover; aspect-ratio: 4/3; }
+.food-info { padding: 36px; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-width: 0; }
+.food-category { font-family: 'Courier New', monospace; text-transform: uppercase; letter-spacing: .15em; font-size: 10px; color: #ff9fac; margin: 0 0 17px; }
+.food-info h3 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(30px, 3vw, 40px); font-weight: 400; letter-spacing: -.04em; line-height: 1.15; margin: 0 0 19px; }
+.food-description { font-size: 14px; line-height: 1.85; color: #cfc4d0; margin: 0 0 19px; }
+.food-tip { border-left: 2px solid #c24860; padding-left: 12px; font-size: 11px; line-height: 1.7; color: #f2c4cf; margin: 0 0 25px; }
+.food-pick { width: 100%; margin-top: auto; gap: 20px; }
+.food-pick[aria-pressed="true"] { background: #57212d; border-color: #e8a4b2; }
+.food-credit { font-size: 10px; line-height: 1.8; margin-top: 18px; color: #b9aebd; overflow-wrap: anywhere; }
+.food-credit summary { cursor: pointer; }
+.food-credit p { margin: 8px 0 0; }
+.food-credit a { color: #dec6d2; text-underline-offset: 3px; }
+.food-swipe-hint { font-size: 11px; color: #d4bac5; text-align: right; margin: 11px 0 30px; }
+.food-choice { padding: 25px; border: 1px solid #b45269; background: #241019eb; display: flex; gap: 25px; align-items: center; justify-content: space-between; margin-top: 28px; }
+.food-choice[hidden] { display: none; }
+.food-choice .eyebrow { font-size: 9px; color: #e1a6b7; margin-bottom: 8px; }
+.food-choice h3 { font-family: Georgia, serif; font-size: 26px; font-weight: 400; margin: 0 0 8px; overflow-wrap: anywhere; }
+.food-choice p:last-child { font-size: 11px; color: #d7b9c6; margin: 0; line-height: 1.8; }
+.food-choice > button { flex-shrink: 0; }
+.food-status { color: #f0d7df; font-size: 14px; line-height: 1.8; margin: 18px 0 0; overflow-wrap: anywhere; }
+.food-status:empty { display: none; }
+.food-custom { border-top: 1px solid #9e536650; border-bottom: 1px solid #9e536650; padding: 22px 0; margin-top: 28px; background: #0d070d66; }
+.food-custom > summary { color: #f1c8d2; font-size: 14px; cursor: pointer; }
+.food-custom form { padding-top: 22px; }
+.food-custom label { display: block; font-size: 12px; margin-bottom: 11px; }
+.food-custom form > div { display: flex; gap: 12px; }
+.food-custom input { flex: 1; min-width: 0; min-height: 53px; border: 1px solid #735265; background: #0f0a13; color: #fff; padding: 15px; font-size: 14px; }
+.food-custom input::placeholder { color: #bba8bb; }
+.food-demo-note { font-size: 11px; line-height: 1.8; color: #ceb4c1; margin: 20px 0 0; }
+@media (max-width: 1000px) { .food-info { padding: 28px; } .food-photo img { min-height: 420px; } .food-info h3 { font-size: 32px; } .food-description { font-size: 13px; } .food-choice { flex-direction: column; align-items: flex-start; gap: 20px; } }
+@media (max-width: 700px) {
+  .food-section { padding-block: 30px 55px; }
+  .food-heading { grid-template-columns: 1fr; gap: 22px; margin-bottom: 27px; }
+  .food-heading > p { max-width: 100%; margin: 0; font-size: 13px; }
+  .food-heading .eyebrow { font-size: 9px; }
+  .food-toolbar { flex-wrap: wrap; gap: 17px; }
+  .food-filters { gap: 6px; }
+  .food-filters button { padding-inline: 13px; font-size: 11px; }
+  .food-controls { margin-left: auto; }
+  .food-card { grid-template-columns: 1fr; align-content: start; }
+  .food-photo img { min-height: 0; height: auto; aspect-ratio: 4/3; }
+  .food-info { padding: 26px 23px; }
+  .food-info h3 { font-size: 33px; }
+  .food-description { font-size: 14px; }
+  .food-swipe-hint { text-align: left; }
+  .food-choice { padding: 22px; }
+  .food-choice > button { width: 100%; gap: 15px; font-size: 10px; }
+  .food-custom form > div { flex-direction: column; }
+}

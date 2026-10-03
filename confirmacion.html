@@ -8,10 +8,10 @@
   <title>El otro lado te espera · Halloween en Casa 199</title>
   <link rel="stylesheet" href="styles.css?v=upside-down-2">
   <link rel="stylesheet" href="confirmacion.css?v=food-1">
-  <link rel="stylesheet" href="food.css?v=food-1">
+  <link rel="stylesheet" href="food.css?v=food-2">
   <link rel="preload" as="image" href="assets/mind-flayer.png">
   <script src="confirmacion.js?v=rsvp-demo-1" defer></script>
-  <script src="food-ideas.js?v=food-1" defer></script>
+  <script src="food-ideas.js?v=food-2" defer></script>
   <script src="food.js?v=food-1" defer></script>
 </head>
 <body class="confirmation-body">
@@ -60,7 +60,7 @@
         <button class="button button-red" type="button" id="food-save">Guardar elección de prueba <span aria-hidden="true">↗</span></button>
       </div>
       <p class="food-status" id="food-status" role="status" aria-live="polite"></p>
-      <details class="food-custom"><summary>Tengo otra idea</summary><form id="food-custom-form"><label for="food-custom-name">¿Qué vas a traer?</label><div><input id="food-custom-name" name="food" maxlength="120" placeholder="Ej.: sándwiches con forma de ataúd" required><button class="button button-dark" type="submit">Elegir mi idea</button></div></form></details>
+      <details class="food-custom"><summary>Tengo otra idea</summary><form id="food-custom-form"><label for="food-custom-name">¿Qué vas a traer?</label><div><textarea id="food-custom-name" name="food" rows="3" maxlength="120" placeholder="Ej.: sándwiches con forma de ataúd, con una opción vegetariana" required></textarea><button class="button button-dark" type="submit">Elegir mi idea</button></div></form></details>
       <p class="food-demo-note">Modo demostración: tu elección se mantiene solo en esta pestaña. No se envía a quien organiza la fiesta.</p>
       <noscript><p class="receipt-message">Habilitá JavaScript para explorar el carrusel y elegir qué llevar.</p></noscript>
     </section>

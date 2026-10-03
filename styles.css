@@ -44,7 +44,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
 .button { min-height: 53px; display: inline-flex; align-items: center; justify-content: space-between; gap: 45px; padding: 16px 22px; font-family: 'Courier New', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: .07em; border: 1px solid transparent; border-radius: 0; text-decoration: none; cursor: pointer; transition: background .2s, box-shadow .2s; }
 .button-red { background: #b51d2a; border-color: #ec4b53; color: #fff; box-shadow: 0 0 25px #bd1c3026; }
 .button-red:hover { background: #d62a38; box-shadow: 0 0 25px #bd1c3055; }
-.hero-footnote { margin: 19px 0 0; font-family: 'Courier New', monospace; font-size: 10px; letter-spacing: .01em; color: #b0b2c0; }
+.hero-footnote { margin: 19px 0 0; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6; letter-spacing: .01em; color: #d0d2dc; }
 .portal-note { position: absolute; right: 0; top: 50%; width: 220px; text-align: right; font-family: 'Courier New', monospace; font-size: 8px; letter-spacing: .1em; color: #b8a5ab; opacity: .8; }
 .portal-note span { display: block; margin-bottom: 6px; }
 .portal-crosshair { height: 26px; width: 26px; margin: 15px 0 0 auto; border-right: 1px solid #eb5d6866; border-top: 1px solid #eb5d6866; }
@@ -132,7 +132,7 @@ a:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid 
   .hero .eyebrow { font-size: 8px; letter-spacing: .13em; margin-bottom: 25px; }
   .hero h1 { font-size: clamp(37px, 10.6vw, 65px); margin-bottom: 26px; -webkit-text-stroke-width: 1px; }
   .hero-description { font-size: 12px; max-width: 310px; line-height: 1.9; margin-bottom: 22px; }
-  .hero-footnote { font-size: 9px; }
+  .hero-footnote { font-size: 13px; }
   .button { font-size: 10px; padding: 15px 19px; }
   .costume-stamp { bottom: 22px; gap: 12px; padding-inline: 12px; }
   .costume-stamp span { font-size: 7px; letter-spacing: .05em; }

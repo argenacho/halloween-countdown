@@ -1,7 +1,59 @@
 'use strict';
 
-// Original, licensed photographs of finished Halloween food and themed drinks.
+// Own party photos and original licensed photographs of finished Halloween food and themed drinks.
 const FOOD_IDEAS = [
+  {
+    "id": "huevos-arana",
+    "title": "Huevos de araña",
+    "category": "salado",
+    "description": "Huevos rellenos con una mezcla verde cremosa y arañas de aceitunas negras. El cuerpo y las patas de cada araña convierten la bandeja en una invasión lista para picar.",
+    "tip": "Llevalos refrigerados hasta servir",
+    "alt": "Huevos rellenos decorados con arañas de aceitunas negras sobre un plato",
+    "image": "assets/food/casa199-huevos-arana.jpg",
+    "credit": {
+      "kind": "party",
+      "author": "Casa 199"
+    }
+  },
+  {
+    "id": "mano-jamon",
+    "title": "Mano con piel de jamón",
+    "category": "salado",
+    "description": "Una picada macabra con una mano cubierta de fetas de jamón crudo, dedos bien marcados y tostadas y cubos de queso alrededor. Una pieza para poner en el centro del banquete.",
+    "tip": "Traé las tostadas y el queso para acompañar",
+    "alt": "Picada con una mano cubierta de jamón crudo, tostadas y cubos de queso",
+    "image": "assets/food/casa199-mano-jamon.jpg",
+    "credit": {
+      "kind": "party",
+      "author": "Casa 199"
+    }
+  },
+  {
+    "id": "salchichas-momia",
+    "title": "Salchichas momia",
+    "category": "salado",
+    "description": "Salchichas envueltas en tiras finas de masa que parecen vendas, con ojos que asoman entre ellas. Cada momia tiene su propia expresión, como las que trajeron a nuestras fiestas.",
+    "tip": "Traelas horneadas y con las salsas aparte",
+    "alt": "Cinco salchichas envueltas en tiras de masa y decoradas con ojos de momia",
+    "image": "assets/food/casa199-salchichas-momia.jpg",
+    "credit": {
+      "kind": "party",
+      "author": "Casa 199"
+    }
+  },
+  {
+    "id": "vomito-guacamole",
+    "title": "Vómito de guacamole",
+    "category": "salado",
+    "description": "Una calabaza tallada que parece vomitar guacamole sobre una bandeja de nachos y chips. Un centro de mesa de Halloween que también se comparte a mordiscos.",
+    "tip": "Llevá los chips aparte para que sigan crocantes",
+    "alt": "Calabaza de Halloween tallada que parece vomitar guacamole sobre una bandeja con nachos y chips",
+    "image": "assets/food/casa199-vomito-guacamole.jpg",
+    "credit": {
+      "kind": "party",
+      "author": "Casa 199"
+    }
+  },
   {
     "id": "cupcakes-fantasma",
     "title": "Cupcakes fantasma",

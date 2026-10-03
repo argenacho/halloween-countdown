@@ -66,7 +66,9 @@ function renderIdeas() {
       figure.append(makeElement('figcaption', '', idea.photoNote));
     }
     const info = makeElement('div', 'food-info');
-    info.append(makeElement('p', 'food-category', categoryLabels[idea.category]));
+    const isPartyPhoto = idea.credit.kind === 'party';
+    const category = `${categoryLabels[idea.category]}${isPartyPhoto ? ' · De nuestras fiestas' : ''}`;
+    info.append(makeElement('p', 'food-category', category));
     info.append(makeElement('h3', '', idea.title));
     info.append(makeElement('p', 'food-description', idea.description));
     info.append(makeElement('p', 'food-tip', idea.tip));
@@ -82,17 +84,21 @@ function renderIdeas() {
     info.append(pick);
     const credit = makeElement('details', 'food-credit');
     credit.append(makeElement('summary', '', 'Créditos de la foto'));
-    const attribution = makeElement('p', '', `${idea.credit.author} · `);
-    const license = makeElement('a', '', idea.credit.license);
-    license.href = idea.credit.licenseUrl;
-    license.target = '_blank';
-    license.rel = 'noopener noreferrer';
-    const source = makeElement('a', '', 'Original en Wikimedia Commons');
-    source.href = idea.credit.source;
-    source.target = '_blank';
-    source.rel = 'noopener noreferrer';
-    attribution.append(license, document.createTextNode(' · '), source, document.createTextNode('. Foto sin modificaciones.'));
-    credit.append(attribution);
+    if (isPartyPhoto) {
+      credit.append(makeElement('p', '', 'Foto propia de fiestas anteriores, compartida por quien organiza Casa 199.'));
+    } else {
+      const attribution = makeElement('p', '', `${idea.credit.author} · `);
+      const license = makeElement('a', '', idea.credit.license);
+      license.href = idea.credit.licenseUrl;
+      license.target = '_blank';
+      license.rel = 'noopener noreferrer';
+      const source = makeElement('a', '', 'Original en Wikimedia Commons');
+      source.href = idea.credit.source;
+      source.target = '_blank';
+      source.rel = 'noopener noreferrer';
+      attribution.append(license, document.createTextNode(' · '), source, document.createTextNode('. Foto sin modificaciones.'));
+      credit.append(attribution);
+    }
     info.append(credit);
     card.append(figure, info);
     track.append(card);

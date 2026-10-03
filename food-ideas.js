@@ -1,6 +1,6 @@
 'use strict';
 
-// Own party photos and original licensed photographs of finished Halloween food and themed drinks.
+// Own party photos, shared reference images, and licensed photographs of Halloween food.
 const FOOD_IDEAS = [
   {
     "id": "huevos-arana",
@@ -55,6 +55,66 @@ const FOOD_IDEAS = [
     }
   },
   {
+    "id": "cheeseburgers-calabaza",
+    "title": "Cheeseburgers calabaza",
+    "category": "salado",
+    "description": "Hamburguesas con queso cheddar recortado como caras de calabaza: ojos triangulares y sonrisas inquietantes. Servilas abiertas para que cada cara de Halloween se vea antes del primer mordisco.",
+    "tip": "Armá las caras de queso antes de servir",
+    "alt": "Cheeseburgers con fetas de cheddar recortadas como caras de calabaza",
+    "image": "assets/food/idea-cheeseburgers-calabaza.jpg",
+    "credit": {
+      "kind": "shared"
+    }
+  },
+  {
+    "id": "chicken-fingers-bruja",
+    "title": "Chicken fingers de bruja",
+    "category": "salado",
+    "description": "Tiras de pollo rebozadas con uñas negras comestibles en la punta. Presentalas de pie en un vaso con telarañas, como en la foto, para convertir los chicken fingers en dedos de bruja.",
+    "tip": "Traé las salsas en recipientes aparte",
+    "alt": "Chicken fingers rebozados decorados con uñas negras alrededor de un vaso con telarañas",
+    "image": "assets/food/idea-chicken-fingers-bruja.jpg",
+    "credit": {
+      "kind": "shared"
+    }
+  },
+  {
+    "id": "mini-pizzas-halloween",
+    "title": "Mini pizzas de Halloween",
+    "category": "salado",
+    "description": "Mini pizzas con fantasmas y vendas de queso, arañas de aceituna, calabazas y caras de monstruo. Una bandeja con distintos personajes, como la de la foto, para que cada invitado elija su susto.",
+    "tip": "Una mini pizza por porción",
+    "alt": "Mini pizzas decoradas como momias, fantasmas, calabazas, arañas y monstruos",
+    "image": "assets/food/idea-mini-pizzas-halloween.jpg",
+    "credit": {
+      "kind": "shared"
+    }
+  },
+  {
+    "id": "finger-hot-dogs",
+    "title": "Finger hot dogs",
+    "category": "salado",
+    "description": "Panchos con salchichas talladas como dedos: nudillos marcados, una uña en la punta y ketchup rojo alrededor. La forma del dedo convierte un clásico sencillo en un bocado macabro.",
+    "tip": "Servilos en panes pequeños y traé ketchup extra",
+    "alt": "Hot dogs con salchichas talladas como dedos y ketchup rojo",
+    "image": "assets/food/idea-finger-hot-dogs.jpg",
+    "credit": {
+      "kind": "shared"
+    }
+  },
+  {
+    "id": "eyeball-pasta",
+    "title": "Eyeball pasta",
+    "category": "salado",
+    "description": "Espaguetis con salsa de tomate y albóndigas convertidas en ojos con queso blanco y aceitunas negras. Un plato con muchas miradas inquietantes, como el de la foto.",
+    "tip": "Llevá porciones pequeñas y tenedores",
+    "alt": "Espaguetis con salsa roja y albóndigas decoradas como ojos con queso y aceitunas",
+    "image": "assets/food/idea-eyeball-pasta.jpg",
+    "credit": {
+      "kind": "shared"
+    }
+  },
+  {
     "id": "cupcakes-fantasma",
     "title": "Cupcakes fantasma",
     "category": "dulce",
@@ -68,22 +128,6 @@ const FOOD_IDEAS = [
       "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
       "source": "https://commons.wikimedia.org/wiki/File:Halloween_cupcakes,_Brisbane,_2023,_01.jpg",
       "originalTitle": "File:Halloween cupcakes, Brisbane, 2023, 01.jpg"
-    }
-  },
-  {
-    "id": "onigiri-fantasma",
-    "title": "Onigiri fantasma",
-    "category": "salado",
-    "description": "Bolitas de arroz rellenas de hongos con forma de fantasma. El de la foto asoma entre hojas verdes y tiene ojos, boca y mejillas: una aparición salada que se come de un bocado.",
-    "tip": "Prepará unidades pequeñas para compartir",
-    "alt": "Onigiri blanco con forma de fantasma junto a un pimiento calabaza",
-    "image": "assets/food/halloween-bento-fantasma.jpg",
-    "credit": {
-      "author": "gamene",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Ghost_onigiri_bento_(4039012309).jpg",
-      "originalTitle": "File:Ghost onigiri bento (4039012309).jpg"
     }
   },
   {
@@ -308,38 +352,6 @@ const FOOD_IDEAS = [
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Ghost_onigiri_bento_(4039012309).jpg",
       "originalTitle": "File:Ghost onigiri bento (4039012309).jpg"
-    }
-  },
-  {
-    "id": "onigiri-gato",
-    "title": "Onigiri de gato embrujado",
-    "category": "salado",
-    "description": "Arroz relleno de salmón, cubierto con una fina capa de huevo violeta y decorado con queso y nori. El gato de Halloween de la foto tiene orejas puntiagudas y una mirada que vigila el banquete.",
-    "tip": "Podés adaptar el relleno a una opción vegetal",
-    "alt": "Bento de Halloween con un gato violeta de arroz, pimientos calabaza y huevos BOO",
-    "image": "assets/food/halloween-bento-gato.jpg",
-    "credit": {
-      "author": "gamene",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Spooky_cat_onigiri_bento_(4054741302).jpg",
-      "originalTitle": "File:Spooky cat onigiri bento (4054741302).jpg"
-    }
-  },
-  {
-    "id": "arroz-telarana",
-    "title": "Arroz con telaraña",
-    "category": "salado",
-    "description": "Una capa de arroz sobre tofu condimentado, con una telaraña recortada en alga nori. La foto muestra cómo queda terminado; usá arañas comestibles para decorar la bandeja.",
-    "tip": "Servilo en porciones individuales",
-    "alt": "Bento con una telaraña de nori sobre arroz y verduras de colores",
-    "image": "assets/food/halloween-arroz-telarana.jpg",
-    "credit": {
-      "author": "gamene",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Spider_web_bento_(4037858009).jpg",
-      "originalTitle": "File:Spider web bento (4037858009).jpg"
     }
   },
   {

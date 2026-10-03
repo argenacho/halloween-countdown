@@ -67,7 +67,9 @@ function renderIdeas() {
     }
     const info = makeElement('div', 'food-info');
     const isPartyPhoto = idea.credit.kind === 'party';
-    const category = `${categoryLabels[idea.category]}${isPartyPhoto ? ' · De nuestras fiestas' : ''}`;
+    const isSharedPhoto = idea.credit.kind === 'shared';
+    const origin = isPartyPhoto ? ' · De nuestras fiestas' : isSharedPhoto ? ' · Ideas para Halloween' : '';
+    const category = `${categoryLabels[idea.category]}${origin}`;
     info.append(makeElement('p', 'food-category', category));
     info.append(makeElement('h3', '', idea.title));
     info.append(makeElement('p', 'food-description', idea.description));
@@ -86,6 +88,8 @@ function renderIdeas() {
     credit.append(makeElement('summary', '', 'Créditos de la foto'));
     if (isPartyPhoto) {
       credit.append(makeElement('p', '', 'Foto propia de fiestas anteriores, compartida por quien organiza Casa 199.'));
+    } else if (isSharedPhoto) {
+      credit.append(makeElement('p', '', 'Imagen de referencia compartida para esta invitación.'));
     } else {
       const attribution = makeElement('p', '', `${idea.credit.author} · `);
       const license = makeElement('a', '', idea.credit.license);

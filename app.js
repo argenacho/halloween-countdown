@@ -3,6 +3,9 @@
 // Replace with the activated FormSubmit AJAX endpoint for the party organizer.
 // Never place API keys or server credentials in this public file.
 const RSVP_ENDPOINT = '';
+// Temporary navigation demo. Disable this flag before accepting real RSVPs.
+const RSVP_DEMO = true;
+const isDemo = RSVP_DEMO && !RSVP_ENDPOINT;
 
 const form = document.getElementById('rsvp-form');
 const nameInput = document.getElementById('nombre');
@@ -16,11 +19,16 @@ function showStatus(message, kind) {
   status.className = `form-status ${kind}`;
 }
 
-if (!RSVP_ENDPOINT) {
+if (!RSVP_ENDPOINT && !isDemo) {
   button.disabled = true;
   button.classList.add('rsvp-pending');
   button.textContent = 'RSVP próximamente';
   showStatus('La confirmación de asistencia estará disponible pronto.', '');
+}
+
+if (isDemo) {
+  showStatus('Modo demostración: probá el recorrido. No se registra asistencia real.', '');
+  privacyNote.textContent = 'Estos datos se usan únicamente para mostrar la confirmación de ejemplo en esta pestaña.';
 }
 
 if (RSVP_ENDPOINT) {
@@ -40,17 +48,28 @@ form.addEventListener('submit', async (event) => {
   peopleInput.setCustomValidity(Number.isSafeInteger(people) && people >= 1 ? '' : 'Ingresá una cantidad entera de personas, incluyéndote a vos.');
   if (!form.reportValidity()) return;
 
-  if (!RSVP_ENDPOINT) {
+  if (!RSVP_ENDPOINT && !isDemo) {
     showStatus('La confirmación todavía no está habilitada. Volvé a intentar cuando esté disponible.', 'error');
     return;
   }
   if (form.elements._honey.value) return;
 
   button.disabled = true;
-  button.textContent = 'Enviando tu confirmación…';
-  showStatus('Estamos enviando tu RSVP.', '');
+  button.textContent = isDemo ? 'Preparando tu pase…' : 'Enviando tu confirmación…';
+  showStatus(isDemo ? 'Abriendo tu confirmación de ejemplo…' : 'Estamos enviando tu RSVP.', '');
   let redirecting = false;
   try {
+    if (isDemo) {
+      await new Promise((resolve) => setTimeout(resolve, 650));
+      try {
+        sessionStorage.setItem('halloween199.rsvp', JSON.stringify({ name, people, demo: true }));
+      } catch (error) {
+        // The demo can render without personal details when storage is unavailable.
+      }
+      redirecting = true;
+      window.location.assign('confirmacion.html#demo');
+      return;
+    }
     const response = await fetch(RSVP_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },

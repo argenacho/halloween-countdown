@@ -12,9 +12,10 @@ try {
   // A generic receipt still works when browser storage is unavailable.
 }
 
-if (receipt || window.location.hash === '#recibido') {
-  document.title = 'Asistencia confirmada · Halloween en Casa 199';
-  document.getElementById('receipt-label').textContent = 'Señal recibida · Asistencia confirmada';
+const isDemo = window.location.hash === '#demo' || receipt?.demo === true;
+if (receipt || window.location.hash === '#recibido' || isDemo) {
+  document.title = isDemo ? 'Confirmación de ejemplo · Halloween en Casa 199' : 'Asistencia confirmada · Halloween en Casa 199';
+  document.getElementById('receipt-label').textContent = isDemo ? 'Modo demostración · RSVP de ejemplo' : 'Señal recibida · Asistencia confirmada';
   document.getElementById('receipt-title').replaceChildren(
     document.createTextNode('Ya estás'),
     document.createElement('br'),
@@ -23,6 +24,7 @@ if (receipt || window.location.hash === '#recibido') {
   accent.textContent = 'del otro lado.';
   document.getElementById('receipt-title').append(accent);
   document.getElementById('receipt-message').textContent = receipt
-    ? `¡${receipt.name}, recibimos tu confirmación! ${receipt.people === 1 ? 'Te esperamos' : `Los esperamos: ${receipt.people} personas`} para una noche fuera de este mundo.`
-    : 'Recibimos tu confirmación. Te esperamos para una noche fuera de este mundo.';
+    ? `¡${receipt.name}, ${isDemo ? 'este es tu pase de prueba' : 'recibimos tu confirmación'}! ${receipt.people === 1 ? 'Te esperamos' : `Los esperamos: ${receipt.people} personas`} para una noche fuera de este mundo.`
+    : isDemo ? 'Este es tu pase de prueba. Así se verá la confirmación de tu asistencia.' : 'Recibimos tu confirmación. Te esperamos para una noche fuera de este mundo.';
+  document.getElementById('receipt-demo-note').hidden = !isDemo;
 }

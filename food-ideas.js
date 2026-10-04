@@ -115,6 +115,46 @@ const FOOD_IDEAS = [
     }
   },
   {
+    "id": "sandwich-monstruo",
+    "title": "Sándwich monstruo",
+    "category": "salado",
+    "description": "Un sándwich con dientes triangulares de queso, una lengua de pepinillo y ojos de aceituna sobre palitos. El pan forma la cabeza del monstruo, listo para salir del Otro Lado.",
+    "tip": "Armá los ojos y la lengua antes de servir",
+    "alt": "Sándwich decorado con dientes de queso, lengua de pepinillo y ojos de aceituna",
+    "image": "assets/food/idea-sandwich-monstruo.jpg",
+    "credit": {
+      "kind": "shared"
+    }
+  },
+  {
+    "id": "picada-fantasma",
+    "title": "Picada fantasma",
+    "category": "salado",
+    "description": "Una bandeja con fiambres, quesos, aceitunas, uvas y crackers alrededor de un gran fantasma de queso. Una picada temática para compartir mientras comienza la noche.",
+    "tip": "Traé la tabla o bandeja lista para compartir",
+    "alt": "Tabla de picada con un fantasma de queso en el centro, fiambres, quesos, aceitunas y uvas",
+    "image": "assets/food/idea-picada-fantasma.jpg",
+    "credit": {
+      "kind": "shared"
+    }
+  },
+  {
+    "id": "inyecciones-laboratorio",
+    "title": "Inyecciones del laboratorio",
+    "category": "salado",
+    "description": "Jeringas gastronómicas sin aguja para servir ketchup con la comida o una pócima roja para brindar. Podés llenarlas con jugo de frutos rojos, un mocktail o un trago con alcohol: elegí la versión que quieras traer.",
+    "tip": "Identificá qué contienen y cuáles tienen alcohol",
+    "alt": "Jeringas sin aguja con una bebida roja sobre una bandeja con hielo y rodajas de naranja",
+    "image": "assets/food/idea-inyecciones-laboratorio.jpg",
+    "credit": {
+      "kind": "shared"
+    },
+    "categories": [
+      "salado",
+      "bebida"
+    ]
+  },
+  {
     "id": "cupcakes-fantasma",
     "title": "Cupcakes fantasma",
     "category": "dulce",
@@ -160,22 +200,6 @@ const FOOD_IDEAS = [
       "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
       "source": "https://commons.wikimedia.org/wiki/File:Eyeball_Punch.jpg",
       "originalTitle": "File:Eyeball Punch.jpg"
-    }
-  },
-  {
-    "id": "huevos-fantasma",
-    "title": "Huevos fantasma",
-    "category": "salado",
-    "description": "Huevos duros con ojos y boca de alga nori, como el fantasma de la parte superior de este bento de Halloween. Un corte en la base ayuda a que queden de pie en la bandeja.",
-    "tip": "Llevalos refrigerados hasta servir",
-    "alt": "Bento de Halloween con un huevo fantasma, muffin araña y rollitos",
-    "image": "assets/food/halloween-bento-arana.jpg",
-    "credit": {
-      "author": "gamene",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Spider_muffin_bento_(4051218539).jpg",
-      "originalTitle": "File:Spider muffin bento (4051218539).jpg"
     }
   },
   {
@@ -320,70 +344,6 @@ const FOOD_IDEAS = [
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
       "source": "https://commons.wikimedia.org/wiki/File:Dunkin_Donuts_2024_Halloween_Spider_Donut.jpg",
       "originalTitle": "File:Dunkin Donuts 2024 Halloween Spider Donut.jpg"
-    }
-  },
-  {
-    "id": "pastel-pies",
-    "title": "Pastel de carne de pies macabros",
-    "category": "salado",
-    "description": "Pastel de carne moldeado como dos pies, con uñas de cebolla y una terminación roja de salsa de tomate. La foto muestra una preparación de Halloween que parece recién escapada del laboratorio.",
-    "tip": "Cortá porciones pequeñas para compartir",
-    "alt": "Pastel de carne con forma de dos pies humanos y salsa roja",
-    "image": "assets/food/halloween-pastel-pies.jpg",
-    "credit": {
-      "author": "Christopher Chapman",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Feetloaf!_it%27s_what%27s_for_dinner!.jpg",
-      "originalTitle": "File:Feetloaf! it's what's for dinner!.jpg"
-    }
-  },
-  {
-    "id": "pimientos-monstruo",
-    "title": "Mini pimientos calabaza",
-    "category": "salado",
-    "description": "Mini pimientos anaranjados tallados con ojos y sonrisa de calabaza. En la foto acompañan al fantasma de arroz; podés rellenarlos con queso crema o hummus para servirlos como bocados fríos.",
-    "tip": "Traelos rellenos y refrigerados",
-    "alt": "Mini pimiento tallado como una calabaza en un bento de Halloween",
-    "image": "assets/food/halloween-bento-fantasma.jpg",
-    "credit": {
-      "author": "gamene",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Ghost_onigiri_bento_(4039012309).jpg",
-      "originalTitle": "File:Ghost onigiri bento (4039012309).jpg"
-    }
-  },
-  {
-    "id": "muffins-arana",
-    "title": "Muffins salados de araña",
-    "category": "salado",
-    "description": "Muffins de maíz y jalapeño con una araña de nori sobre la superficie. El de la foto ocupa el frente del bento: amarillo intenso, patas oscuras y un toque picante para espantar a los distraídos.",
-    "tip": "Avisá si la preparación es picante",
-    "alt": "Muffin salado amarillo decorado con una araña, acompañado de un huevo fantasma",
-    "image": "assets/food/halloween-bento-arana.jpg",
-    "credit": {
-      "author": "gamene",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Spider_muffin_bento_(4051218539).jpg",
-      "originalTitle": "File:Spider muffin bento (4051218539).jpg"
-    }
-  },
-  {
-    "id": "huevos-boo",
-    "title": "Huevitos BOO",
-    "category": "salado",
-    "description": "Huevos de codorniz con letras de nori que forman BOO, como los que acompañan al gato violeta en la foto. Sumales pequeñas caras de fantasma para completar una bandeja llena de sustos.",
-    "tip": "Mantenelos fríos hasta servir",
-    "alt": "Huevos pequeños decorados con las letras BOO dentro de un bento de Halloween",
-    "image": "assets/food/halloween-bento-gato.jpg",
-    "credit": {
-      "author": "gamene",
-      "license": "CC BY 2.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-      "source": "https://commons.wikimedia.org/wiki/File:Spooky_cat_onigiri_bento_(4054741302).jpg",
-      "originalTitle": "File:Spooky cat onigiri bento (4054741302).jpg"
     }
   },
   {

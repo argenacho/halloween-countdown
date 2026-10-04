@@ -18,6 +18,10 @@ let currentIndex = 0;
 let selected = null;
 let scrollFrame = null;
 
+function categoriesFor(idea) {
+  return idea.categories || [idea.category];
+}
+
 function makeElement(tag, className, text) {
   const element = document.createElement(tag);
   if (className) element.className = className;
@@ -69,7 +73,7 @@ function renderIdeas() {
     const isPartyPhoto = idea.credit.kind === 'party';
     const isSharedPhoto = idea.credit.kind === 'shared';
     const origin = isPartyPhoto ? ' · De nuestras fiestas' : isSharedPhoto ? ' · Ideas para Halloween' : '';
-    const category = `${categoryLabels[idea.category]}${origin}`;
+    const category = `${categoriesFor(idea).map((type) => categoryLabels[type]).join(' / ')}${origin}`;
     info.append(makeElement('p', 'food-category', category));
     info.append(makeElement('h3', '', idea.title));
     info.append(makeElement('p', 'food-description', idea.description));
@@ -138,7 +142,7 @@ track.addEventListener('scroll', () => {
 }, { passive: true });
 filters.forEach((button) => button.addEventListener('click', () => {
   filters.forEach((filter) => filter.setAttribute('aria-pressed', String(filter === button)));
-  visibleIdeas = button.dataset.category === 'all' ? FOOD_IDEAS : FOOD_IDEAS.filter((idea) => idea.category === button.dataset.category);
+  visibleIdeas = button.dataset.category === 'all' ? FOOD_IDEAS : FOOD_IDEAS.filter((idea) => categoriesFor(idea).includes(button.dataset.category));
   renderIdeas();
 }));
 

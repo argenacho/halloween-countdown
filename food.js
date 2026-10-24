@@ -17,6 +17,15 @@ let visibleIdeas = FOOD_IDEAS;
 let currentIndex = 0;
 let selected = null;
 let scrollFrame = null;
+let foodSaving = false;
+const foodDemo = isDemo;
+const foodCanSave = foodDemo || (Boolean(HalloweenRSVP.endpoint) && hasConfirmedReceipt);
+const foodNote = document.querySelector('.food-demo-note');
+foodNote.textContent = foodDemo
+  ? 'Modo demostración: tu elección se mantiene solo en esta pestaña. No se envía a quien organiza la fiesta.'
+  : foodCanSave
+    ? 'Al guardar, tu elección se agrega a tu confirmación en la planilla privada de la fiesta. Podés actualizarla desde esta pestaña.'
+    : 'Para guardar qué vas a traer, primero confirmá tu asistencia desde la invitación.';
 
 function categoriesFor(idea) {
   return idea.categories || [idea.category];
@@ -36,12 +45,14 @@ function updateControls() {
 }
 
 function pickIdea(idea) {
+  if (foodSaving) return;
   selected = { id: idea.id || 'custom', title: idea.title };
   choicePanel.hidden = false;
   choiceTitle.textContent = selected.title;
   choiceHelp.textContent = 'Podés cambiar de idea antes de guardar.';
   foodStatus.textContent = '';
-  saveButton.textContent = 'Guardar elección de prueba';
+  saveButton.textContent = foodDemo ? 'Guardar elección de prueba' : 'Guardar qué voy a llevar';
+  saveButton.disabled = !foodCanSave;
   document.querySelectorAll('.food-pick').forEach((button) => {
     const active = button.dataset.ideaId === selected.id;
     button.setAttribute('aria-pressed', String(active));
@@ -80,6 +91,7 @@ function renderIdeas() {
     info.append(makeElement('p', 'food-tip', idea.tip));
     const pick = makeElement('button', 'button button-red food-pick', selected?.id === idea.id ? 'Idea elegida' : 'Voy a llevar esto');
     pick.type = 'button';
+    pick.disabled = foodSaving;
     pick.dataset.ideaId = idea.id;
     pick.setAttribute('aria-pressed', String(selected?.id === idea.id));
     pick.setAttribute('aria-label', `Elegir ${idea.title}`);
@@ -149,34 +161,58 @@ filters.forEach((button) => button.addEventListener('click', () => {
 customInput.addEventListener('input', () => customInput.setCustomValidity(''));
 customForm.addEventListener('submit', (event) => {
   event.preventDefault();
-  const title = customInput.value.trim();
+  const title = customInput.value.replace(/\s+/g, ' ').trim();
   customInput.setCustomValidity(title ? '' : 'Contanos qué vas a traer.');
   if (!customForm.reportValidity()) return;
   pickIdea({ id: 'custom', title });
   choicePanel.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
 });
 
-saveButton.addEventListener('click', () => {
-  if (!selected) return;
-  let retained = false;
+saveButton.addEventListener('click', async () => {
+  if (!selected || foodSaving || !foodCanSave) return;
+  foodSaving = true;
+  saveButton.disabled = true;
+  customInput.disabled = true;
+  customForm.querySelector('button').disabled = true;
+  document.querySelectorAll('.food-pick').forEach((button) => { button.disabled = true; });
+  saveButton.textContent = 'Guardando…';
+  foodStatus.textContent = '';
   try {
-    sessionStorage.setItem('halloween199.food', JSON.stringify({ ...selected, person: receipt?.name || '' }));
-    retained = true;
+    if (!foodDemo) {
+      await HalloweenRSVP.send('food', { id: receipt.id, token: receipt.token, foodId: selected.id, food: selected.title });
+    }
+    let retained = false;
+    try {
+      sessionStorage.setItem('halloween199.food', JSON.stringify({ ...selected, person: receipt?.name || '', receiptId: foodDemo ? 'demo' : receipt.id, saved: true }));
+      retained = true;
+    } catch (error) {
+      // A server acknowledgement remains valid even if local caching is unavailable.
+    }
+    choiceHelp.textContent = 'Podés elegir otra idea cuando quieras.';
+    saveButton.textContent = foodDemo ? 'Actualizar elección de prueba' : 'Actualizar qué voy a llevar';
+    foodStatus.textContent = foodDemo
+      ? `Elegiste «${selected.title}». ${retained ? 'Tu elección de prueba queda en esta pestaña.' : 'Podés verla acá, pero no se conservará al recargar.'} No se envió a quien organiza.`
+      : `¡Guardamos «${selected.title}» junto a tu confirmación! Quien organiza ya puede verlo en la planilla.`;
   } catch (error) {
-    // Selection still works in this view when browser storage is blocked.
+    foodStatus.textContent = 'No pudimos confirmar que se guardó tu elección. Tu asistencia sigue confirmada. Intentá guardar la comida de nuevo.';
+    choiceHelp.textContent = 'Esta elección todavía no está confirmada.';
+    saveButton.textContent = 'Reintentar guardar elección';
+  } finally {
+    foodSaving = false;
+    saveButton.disabled = false;
+    customInput.disabled = false;
+    customForm.querySelector('button').disabled = false;
+    document.querySelectorAll('.food-pick').forEach((button) => { button.disabled = false; });
   }
-  choiceHelp.textContent = 'Podés elegir otra idea cuando quieras.';
-  saveButton.textContent = 'Actualizar elección de prueba';
-  foodStatus.textContent = `Elegiste «${selected.title}». ${retained ? 'Tu elección de prueba queda en esta pestaña.' : 'Podés verla acá, pero no se conservará al recargar.'} No se envió a quien organiza.`;
 });
 
 try {
   const saved = JSON.parse(sessionStorage.getItem('halloween199.food'));
-  if (saved && saved.person === (receipt?.name || '') && typeof saved.title === 'string' && saved.title.trim() && saved.title.length <= 120) {
+  if (saved && saved.person === (receipt?.name || '') && (foodDemo || saved.receiptId === receipt?.id) && typeof saved.title === 'string' && saved.title.trim() && saved.title.length <= 120) {
     const idea = FOOD_IDEAS.find((item) => item.id === saved.id);
     if (idea || saved.id === 'custom') {
       pickIdea(idea || { id: 'custom', title: saved.title });
-      choiceHelp.textContent = 'Esta es tu elección de prueba. Podés cambiarla.';
+      choiceHelp.textContent = foodDemo ? 'Esta es tu elección de prueba. Podés cambiarla.' : 'Esta es tu elección guardada. Podés cambiarla.';
     }
   }
 } catch (error) {

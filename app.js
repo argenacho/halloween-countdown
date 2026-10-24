@@ -1,11 +1,6 @@
 'use strict';
 
-// Replace with the activated FormSubmit AJAX endpoint for the party organizer.
-// Never place API keys or server credentials in this public file.
-const RSVP_ENDPOINT = '';
-// Temporary navigation demo. Disable this flag before accepting real RSVPs.
-const RSVP_DEMO = true;
-const isDemo = RSVP_DEMO && !RSVP_ENDPOINT;
+const isDemo = HalloweenRSVP.demo;
 
 const form = document.getElementById('rsvp-form');
 const nameInput = document.getElementById('nombre');
@@ -13,13 +8,14 @@ const peopleInput = document.getElementById('personas');
 const button = document.getElementById('submit-rsvp');
 const status = document.getElementById('form-status');
 const privacyNote = document.getElementById('privacy-note');
+button.disabled = !HalloweenRSVP.endpoint && !isDemo;
 
 function showStatus(message, kind) {
   status.textContent = message;
   status.className = `form-status ${kind}`;
 }
 
-if (!RSVP_ENDPOINT && !isDemo) {
+if (!HalloweenRSVP.endpoint && !isDemo) {
   button.disabled = true;
   button.classList.add('rsvp-pending');
   button.textContent = 'RSVP próximamente';
@@ -31,8 +27,8 @@ if (isDemo) {
   privacyNote.textContent = 'Estos datos se usan únicamente para mostrar la confirmación de ejemplo en esta pestaña.';
 }
 
-if (RSVP_ENDPOINT) {
-  privacyNote.textContent = 'Tu nombre y la cantidad de personas se envían por FormSubmit a quien organiza la fiesta. Los usamos únicamente para organizarla.';
+if (HalloweenRSVP.endpoint) {
+  privacyNote.textContent = 'Guardamos tu nombre, la cantidad de personas y, si la elegís, la comida que vas a traer en una planilla privada de quien organiza. Usamos estos datos únicamente para organizar la fiesta.';
 }
 
 nameInput.addEventListener('input', () => nameInput.setCustomValidity(''));
@@ -45,10 +41,10 @@ form.addEventListener('submit', async (event) => {
   const name = nameInput.value.trim();
   const people = Number(peopleInput.value);
   nameInput.setCustomValidity(name ? '' : 'Escribí tu nombre.');
-  peopleInput.setCustomValidity(Number.isSafeInteger(people) && people >= 1 ? '' : 'Ingresá una cantidad entera de personas, incluyéndote a vos.');
+  peopleInput.setCustomValidity(Number.isSafeInteger(people) && people >= 1 && people <= 1000 ? '' : 'Ingresá una cantidad entera de personas entre 1 y 1000, incluyéndote a vos.');
   if (!form.reportValidity()) return;
 
-  if (!RSVP_ENDPOINT && !isDemo) {
+  if (!HalloweenRSVP.endpoint && !isDemo) {
     showStatus('La confirmación todavía no está habilitada. Volvé a intentar cuando esté disponible.', 'error');
     return;
   }
@@ -71,33 +67,21 @@ form.addEventListener('submit', async (event) => {
       window.location.assign('confirmacion.html#demo');
       return;
     }
-    const response = await fetch(RSVP_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-      body: JSON.stringify({
-        nombre: name,
-        personas: people,
-        _subject: 'RSVP · Halloween en Casa 199 · 31/10/2026',
-        _template: 'table',
-        _honey: '',
-      }),
-      signal: AbortSignal.timeout(20000),
-    });
-    const result = await response.json();
-    if (!response.ok || (result.success !== true && result.success !== 'true')) {
-      throw new Error('RSVP not accepted');
-    }
-    showStatus(`¡Listo, ${name}! Confirmamos ${people === 1 ? 'tu asistencia' : `la asistencia de ${people} personas`}. Nos vemos el 31 en Casa 199. No te olvides del disfraz.`, 'success');
-    try {
-      sessionStorage.removeItem('halloween199.food');
-      sessionStorage.setItem('halloween199.rsvp', JSON.stringify({ name, people }));
-    } catch (error) {
-      // The receipt can still be displayed without personal details when storage is unavailable.
-    }
+    const credentials = HalloweenRSVP.pendingCredentials();
+    // Verify storage before sending: these credentials are needed on the next page.
+    const savedReceipt = { ...credentials, name, people, demo: false, confirmed: false };
+    sessionStorage.setItem('halloween199.rsvp', JSON.stringify(savedReceipt));
+    await HalloweenRSVP.send('rsvp', { ...credentials, name, people, honey: form.elements._honey.value });
+    sessionStorage.removeItem('halloween199.food');
+    sessionStorage.setItem('halloween199.rsvp', JSON.stringify({ ...savedReceipt, confirmed: true }));
+    showStatus(`¡Listo, ${name}! Nos vemos el viernes 30 desde las 19:30 en Casa 199. No te olvides del disfraz.`, 'success');
     redirecting = true;
     window.location.assign('confirmacion.html#recibido');
   } catch (error) {
-    showStatus('No pudimos confirmar la recepción. Tus datos siguen en el formulario. Intentá de nuevo en unos minutos.', 'error');
+    const storageBlocked = ['SecurityError', 'QuotaExceededError'].includes(error.name);
+    showStatus(storageBlocked
+      ? 'Tu navegador no permite conservar el pase. Habilitá el almacenamiento de este sitio para confirmar y después elegir la comida. Tus datos siguen en el formulario.'
+      : 'No pudimos confirmar la recepción. Tus datos siguen en el formulario. Intentá de nuevo en unos minutos.', 'error');
   } finally {
     if (!redirecting) {
       button.disabled = false;

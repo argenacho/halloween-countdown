@@ -12,8 +12,9 @@ try {
   // A generic receipt still works when browser storage is unavailable.
 }
 
-const isDemo = window.location.hash === '#demo' || receipt?.demo === true;
-if (receipt || window.location.hash === '#recibido' || isDemo) {
+const isDemo = !HalloweenRSVP.endpoint && HalloweenRSVP.demo;
+const hasConfirmedReceipt = receipt?.confirmed === true && receipt?.demo === false && HalloweenRSVP.validCredentials(receipt);
+if (hasConfirmedReceipt || isDemo) {
   document.title = isDemo ? 'Confirmación de ejemplo · Halloween en Casa 199' : 'Asistencia confirmada · Halloween en Casa 199';
   document.getElementById('receipt-label').textContent = isDemo ? 'Modo demostración · RSVP de ejemplo' : 'Señal recibida · Asistencia confirmada';
   document.getElementById('receipt-title').replaceChildren(
